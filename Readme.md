@@ -24,3 +24,9 @@ var Downtown={
     Lastly, output both NumberOFDonutsForEveryHour and TotalNumbersOfDonutsForWholeDay.
 
     
+    One test result (for the first two locations):
+    
+Number Of Donuts For Every Hour in Downtown is 76
+Total Numbers Of Donuts For Whole Day in Downtown is 836
+57 Number Of Donuts For Every Hour in CaptitolHill is 9
+Total Numbers Of Donuts For Whole Day in CaptitolHill is 108
