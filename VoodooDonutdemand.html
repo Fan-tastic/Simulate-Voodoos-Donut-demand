@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Simulate Voodoo's Donut demand</title>
+</head>
+<body>
+<script>
+    var Downtown={
+        HoursOfOperation : 11,//from 7a-6p, operation hour is 11
+        HourlyFootTraffic : Math.floor(Math.random() * 141 + 80),  //randomize a number from hourly foot traffic range
+        PercentEntering : 0.1,
+        NumberOfDonutsOrderdPerEnt:4
+   };
+    //var i=Downtown.HoursOfOperation;
+    //var NumberOFDonutsForEveryHour1;
+    //var TotalNumbersOfDonutsForWholeDay1;
+
+        var CaptitolHill={
+        HoursOfOperation : 11,
+        HourlyFootTraffic : Math.floor(Math.random() * 41 + 5),
+        PercentEntering : 0.45,
+        NumberOfDonutsOrderdPerEnt:2
+    };
+    var SouthLakeUnion={
+        HoursOfOperation : 11,
+        HourlyFootTraffic : Math.floor(Math.random() * 71 + 180),
+        PercentEntering : 0.05,
+        NumberOfDonutsOrderdPerEnt:6
+    };
+    var Wedgewood={
+        HoursOfOperation : 11,
+        HourlyFootTraffic :Math.floor(Math.random() * 41 + 20),
+        PercentEntering : 0.2,
+        NumberOfDonutsOrderdPerEnt:1.5
+    };
+    var Ballard={
+        HoursOfOperation : 11,
+        HourlyFootTraffic : Math.floor(Math.random() * 151 + 25),
+        PercentEntering : 0.33,
+        NumberOfDonutsOrderdPerEnt:1
+    };
+    for(i=0;i<12;i++) {
+        NumberOFDonutsForEveryHour1 = Math.floor(Downtown.HourlyFootTraffic * (Downtown.PercentEntering) * Downtown.NumberOfDonutsOrderdPerEnt);
+        TotalNumbersOfDonutsForWholeDay1 = i * NumberOFDonutsForEveryHour1;
+
+        //console.log("Number OF Donuts For Every Hour in Downtown is " + NumberOFDonutsForEveryHour1);
+        //console.log("Total Numbers Of Donuts For Whole Day in Downtown is " + TotalNumbersOfDonutsForWholeDay1);
+    }
+    console.log("Number Of Donuts For Every Hour in Downtown is " + NumberOFDonutsForEveryHour1);
+    console.log("Total Numbers Of Donuts For Whole Day in Downtown is " + TotalNumbersOfDonutsForWholeDay1);
+
+    for(j=0;j<12;j++) {
+        NumberOFDonutsForEveryHour2 = Math.floor(CaptitolHill.HourlyFootTraffic * (CaptitolHill.PercentEntering) * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+        TotalNumbersOfDonutsForWholeDay2 = i * NumberOFDonutsForEveryHour2;
+    }
+    console.log("Number Of Donuts For Every Hour in CaptitolHill is " + NumberOFDonutsForEveryHour2);
+    console.log("Total Numbers Of Donuts For Whole Day in CaptitolHill is " + TotalNumbersOfDonutsForWholeDay2);
+
+
+
+
+</script>
+
+</body>
+</html>
