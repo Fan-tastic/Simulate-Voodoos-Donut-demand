@@ -1,4 +1,4 @@
-<img src="https://www.dropbox.com/s/dxnhqhw9f77o9bz/Voodoo%20Donuts.jpg?dl=0">
+<img src="http://f.picphotos.baidu.com/album/s%3D1100%3Bq%3D90/sign=253afe5efff2b211e02e814ffab05e49/e7cd7b899e510fb33a26efbadd33c895d1430cdb.jpg">
 
   This is about the Simulate Voodoo's Donut Demand assignment.
 
