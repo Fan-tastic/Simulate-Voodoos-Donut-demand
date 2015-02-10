@@ -16,13 +16,19 @@ var Downtown={
    For the var HourlyFootTraffic, it will be a random number from a certain range, I put "Math.random()"on it and make sure the number output from this range. 
    Both vars HourlyFootTraffic and PercentEntering may have decimal numbers, I put a "Math.floor" to make them integers.
 
-   Secondly, I was told that Hourly foot traffic should be randomly selected from the range provided, for each hour of the day, which means I should not just multiple the HoursOfOperation by NumberOFDonutsForEveryHour, I have to add a for loop and make a random sum to output the TotalNumbersOfDonutsForWholeDay.
+   Secondly, I was told that Hourly foot traffic should be randomly selected from the range provided, for each hour of the day, which means I should not just multiple the HoursOfOperation by NumberOFDonutsForEveryHour, I have to add a for loop and make a random sum to output the "Total Numbers Of Donuts For Whole Day".
    Here it is:
-   for(i=0;i<12;i++) {
-        NumberOFDonutsForEveryHour1 = Math.floor(Downtown.HourlyFootTraffic * (Downtown.PercentEntering) * Downtown.NumberOfDonutsOrderdPerEnt);
-        TotalNumbersOfDonutsForWholeDay1 = i * NumberOFDonutsForEveryHour1;
+
+    var x1= 0,
+        x2=0;
+    for (i=1;i<=Downtown.HoursOfOperation;i++) {
+        Downtown.HourlyFootTraffic[i] = Math.floor(Math.random() * 141 + 80);
+        CaptitolHill.HourlyFootTraffic[i]= Math.floor(Math.random() * 41 + 5);
+        x1 += parseInt(Downtown.HourlyFootTraffic[i]);
+        x2 += parseInt(CaptitolHill.HourlyFootTraffic[i]);
+        //console.log(x);
     }
 
-    Lastly, output both NumberOFDonutsForEveryHour and TotalNumbersOfDonutsForWholeDay.
-    One test result (for the first two locations):
+    Lastly, output the numbers and put them into tables.
+   Only tested for the first two locations.
     
