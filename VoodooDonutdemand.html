@@ -25,7 +25,7 @@
             Number of People Enter
         </td>
         <td align="center">
-         Donuts Needed At This Hour
+         Donuts Are Needed At This Hour
         </td>
     </tr>
     <tr align="center">
@@ -85,7 +85,7 @@
     </tr>
     <tr align="center">
         <td>
-            11am-12am
+            11am-12pm
         </td>
         <td id="a6">
         </td>
@@ -96,7 +96,7 @@
     </tr>
     <tr align="center">
         <td>
-            12am-1pm
+            12pm-1pm
         </td>
         <td id="a7">
         </td>
@@ -170,7 +170,7 @@
             Number of People Enter
         </td>
         <td align="center">
-            Donuts Needed At This Hour
+            Donuts Are Needed At This Hour
         </td>
     </tr>
     <tr align="center">
@@ -230,7 +230,7 @@
     </tr>
     <tr align="center">
         <td>
-            11am-12am
+            11am-12pm
         </td>
         <td id="a61">
         </td>
@@ -241,7 +241,7 @@
     </tr>
     <tr align="center">
         <td>
-            12am-1pm
+            12pm-1pm
         </td>
         <td id="a71">
         </td>
@@ -303,8 +303,6 @@
         PercentEntering : 0.1,//10%
         NumberOfDonutsOrderdPerEnt:4
     };
-
-
     var CaptitolHill = {
         HoursOfOperation : 11,
         HourlyFootTraffic : [],
@@ -329,14 +327,15 @@
         PercentEntering : 0.33,
         NumberOfDonutsOrderdPerEnt:1
     };
-    var x1 = 0,
-        x2 = 0;
+    var x1 = 0,//make Downtown.HourlyFootTraffic[i] integer
+        x2 = 0;//make CaptitolHill.HourlyFootTraffic[i] integer
     for (i=1;i<=Downtown.HoursOfOperation;i++) {
         Downtown.HourlyFootTraffic[i] = Math.floor(Math.random() * 141 + 80);
         CaptitolHill.HourlyFootTraffic[i]= Math.floor(Math.random() * 41 + 5);
         x1 += parseInt(Downtown.HourlyFootTraffic[i]);
         x2 += parseInt(CaptitolHill.HourlyFootTraffic[i]);
-        //console.log(x);
+        console.log("Downtown.HourlyFootTraffic is " + x1);
+        console.log("CaptitolHill.HourlyFootTraffic is " + x2);
     }
     // Foot Traffic At This Hour
     a1.innerHTML = Downtown.HourlyFootTraffic[1];
@@ -375,7 +374,8 @@
     c10.innerHTML = Math.floor(a10.innerHTML * Downtown.PercentEntering);
     c11.innerHTML = Math.floor(a11.innerHTML * Downtown.PercentEntering);
     //Total Numbers Of Donuts Needed For WholeDay
-    d1.innerHTML = "Total Numbers Of Donuts Needed For WholeDay: " + Math.floor(x1 * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
+    d1.innerHTML = "Total Numbers Of Donuts Needed For WholeDay In Downtown: " + Math.floor(x1 * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
+    console.log(d1.innerHTML);
     //#2
     a01.innerHTML = CaptitolHill.HourlyFootTraffic[1];
     a21.innerHTML = CaptitolHill.HourlyFootTraffic[2];
@@ -413,7 +413,8 @@
     c101.innerHTML = Math.floor(a101.innerHTML * CaptitolHill.PercentEntering);
     c111.innerHTML = Math.floor(a111.innerHTML * CaptitolHill.PercentEntering);
     //Total Numbers Of Donuts Needed For WholeDay
-    d2.innerHTML = "Total Numbers Of Donuts Needed For WholeDay: " + Math.floor(x2 * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+    d2.innerHTML = "Total Numbers Of Donuts Needed For WholeDay In CaptitolHill: " + Math.floor(x2 * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+    console.log(d2.innerHTML);
 </script>
 </body>
 </html>

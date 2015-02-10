@@ -19,15 +19,17 @@ var Downtown={
    Secondly, I was told that Hourly foot traffic should be randomly selected from the range provided, for each hour of the day, which means I should not just multiple the HoursOfOperation by NumberOFDonutsForEveryHour, I have to add a for loop and make a random sum to output the "Total Numbers Of Donuts For Whole Day".
    Here it is:
 
-    var x1= 0,
-        x2=0;
-    for (i=1;i<=Downtown.HoursOfOperation;i++) {
-        Downtown.HourlyFootTraffic[i] = Math.floor(Math.random() * 141 + 80);
-        CaptitolHill.HourlyFootTraffic[i]= Math.floor(Math.random() * 41 + 5);
-        x1 += parseInt(Downtown.HourlyFootTraffic[i]);
-        x2 += parseInt(CaptitolHill.HourlyFootTraffic[i]);
-        //console.log(x);
-    }
+```javascript
+var x1= 0,
+    x2=0;
+for (i=1;i<=Downtown.HoursOfOperation;i++) {
+    Downtown.HourlyFootTraffic[i] = Math.floor(Math.random() * 141 + 80);
+    CaptitolHill.HourlyFootTraffic[i]= Math.floor(Math.random() * 41 + 5);
+    x1 += parseInt(Downtown.HourlyFootTraffic[i]);
+    x2 += parseInt(CaptitolHill.HourlyFootTraffic[i]);
+    //console.log(x);
+}
+```
 
     Lastly, output the numbers and put them into tables.
    Only tested for the first two locations.
