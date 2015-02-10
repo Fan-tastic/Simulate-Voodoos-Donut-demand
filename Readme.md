@@ -5,12 +5,15 @@
 Firstly I defined all the locations and added properties to each of them
 
 For example:
+
+```
 var Downtown={
         HoursOfOperation : 11,//from 7a-6p, operation hour is 11
         HourlyFootTraffic : Math.floor(Math.random() * 141 + 80),  //randomize a number from hourly foot traffic range
         PercentEntering : 0.1,
         NumberOfDonutsOrderdPerEnt:4
    }; 
+```
 
    For the var HoursOfOperation, it is from 7am-5am, which is 11 hours;
    For the var HourlyFootTraffic, it will be a random number from a certain range, I put "Math.random()"on it and make sure the number output from this range. 
@@ -31,6 +34,6 @@ for (i=1;i<=Downtown.HoursOfOperation;i++) {
 }
 ```
 
-    Lastly, output the numbers and put them into tables.
-   Only tested for the first two locations.
+Lastly, output the numbers and put them into tables.
+Only tested for the first two locations.
     
