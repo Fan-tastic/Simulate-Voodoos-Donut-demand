@@ -1,4 +1,6 @@
-This is about the Simulate Voodoo's Donut Demand assignment.
+<img src="https://www.dropbox.com/s/dxnhqhw9f77o9bz/Voodoo%20Donuts.jpg?dl=0">
+
+  This is about the Simulate Voodoo's Donut Demand assignment.
 
 Firstly I defined all the locations and added properties to each of them
 
@@ -22,11 +24,5 @@ var Downtown={
     }
 
     Lastly, output both NumberOFDonutsForEveryHour and TotalNumbersOfDonutsForWholeDay.
-
-    
     One test result (for the first two locations):
     
-Number Of Donuts For Every Hour in Downtown is 76
-Total Numbers Of Donuts For Whole Day in Downtown is 836
-57 Number Of Donuts For Every Hour in CaptitolHill is 9
-Total Numbers Of Donuts For Whole Day in CaptitolHill is 108
