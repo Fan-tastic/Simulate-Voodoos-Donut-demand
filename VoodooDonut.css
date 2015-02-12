@@ -1,0 +1,472 @@
+body {
+	background:url(Pic/Donuts1.jpeg);
+}
+
+header {
+	font-weight:bold;
+	font-family: cursive, fantasy;
+	font-size:70px;
+	background-color: #FFEEDD;
+	opacity: 0.9;
+
+}
+
+div.Name {
+	background-color: #FFEEDD;
+    opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+}
+
+div.Detail {
+	background-color: #FFEEDD;
+    opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+}
+
+input.submit:hover {
+	background-color: #7B7B7B;
+}
+
+tr.tb1Title {
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    font-size:30px;
+    background-color:  #930000;
+}
+
+tr.tb1Sub {
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #930000;
+}
+
+tr.tb13{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #AE0000;
+}
+tr.tb14{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #CE0000;
+}
+tr.tb15{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  	#EA0000;
+}
+tr.tb16{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FF0000;
+}
+tr.tb17{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  	#FF2D2D;
+}
+tr.tb18{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color: 	#FF5151;
+}
+tr.tb19{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #ff7575;
+}
+tr.tb110{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FF9797;
+}
+tr.tb111{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFB5B5;
+}
+tr.tb112{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFD2D2;
+}
+tr.tb113{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFECEC;
+}
+
+tr.tb2Title {
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    font-size:30px;
+    background-color:  #D9006C;
+}
+
+tr.tb2Sub {
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #D9006C;
+}
+
+tr.tb23{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #F00078;
+}
+tr.tb24{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FF0080;
+}
+tr.tb25{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  	#FF359A;
+}
+tr.tb26{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FF60AF;
+}
+tr.tb27{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  	#FF79BC;
+}
+tr.tb28{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color: 	#FF95CA;
+}
+tr.tb29{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #ffaad5;
+}
+tr.tb210{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFC1E0;
+}
+tr.tb211{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFD9EC;
+}
+tr.tb212{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFD2D2;
+}
+tr.tb213{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFECF5;
+}
+
+tr.tb3Title {
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    font-size:30px;
+    background-color:  #C6A300;
+}
+
+tr.tb3Sub {
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #C6A300;
+}
+
+tr.tb33{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #D9B300;
+}
+tr.tb34{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #EAC100;
+}
+tr.tb35{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  	#FFD306;
+}
+tr.tb36{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFDC35;
+}
+tr.tb37{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  	#FFE153;
+}
+tr.tb38{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color: 	#FFE66F;
+}
+tr.tb39{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFED97;
+}
+tr.tb310{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFF0AC;
+}
+tr.tb311{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFF4C1;
+}
+tr.tb312{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFF8D7;
+}
+tr.tb313{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFFCEC;
+}
+
+tr.tb4Title {
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #EA7500;
+    font-size:30px;
+}
+
+tr.tb4Sub {
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #EA7500;
+}
+
+tr.tb43{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FF8000;
+}
+tr.tb44{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FF9224;
+}
+tr.tb45{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  	#FFA042;
+}
+tr.tb46{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFAF60;
+}
+tr.tb47{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  	#FFBB77;
+}
+tr.tb48{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color: 	#FFC78E;
+}
+tr.tb49{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFD1A4;
+}
+tr.tb410{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFDCB9;
+}
+tr.tb411{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFE4CA;
+}
+tr.tb412{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFEEDD;
+}
+tr.tb413{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFFAF4;
+}
+
+tr.tb5Title {
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #D94600;
+    font-size:30px;
+}
+
+tr.tb5Sub {
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #D94600;
+}
+
+tr.tb53{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #F75000;
+}
+tr.tb54{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FF5809;
+}
+tr.tb55{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  	#FF8040;
+}
+tr.tb56{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FF8F59;
+}
+tr.tb57{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  	#FF9D6F;
+}
+tr.tb58{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color: 	#FFAD86;
+}
+tr.tb59{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFBD9D;
+}
+tr.tb510{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFCBB3;
+}
+tr.tb511{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFDAC8;
+}
+tr.tb512{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFE6D9;
+}
+tr.tb513{
+	opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #FFF3EE;
+}
+
+foot.d1{
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    opacity: 0.9;
+    background-color:  #FFEEDD;
+}
+foot.d2{
+    font-weight:bold;
+    font-family: cursive, fantasy;
+       opacity: 0.9;
+    background-color:  #FFEEDD;
+}
+foot.d3{
+    font-weight:bold;
+    font-family: cursive, fantasy;
+       opacity: 0.9;
+    background-color:  #FFEEDD;
+}
+foot.d4{
+    font-weight:bold;
+    font-family: cursive, fantasy;
+       opacity: 0.9;
+    background-color:  #FFEEDD;
+}
+foot.d5{
+    font-weight:bold;
+    font-family: cursive, fantasy;
+       opacity: 0.9;
+    background-color:  #FFEEDD;
+}
+

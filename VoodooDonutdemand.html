@@ -2,1048 +2,1082 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="VoodooDonut.css">
     <title>Simulate Voodoo's Donut demand</title>
 </head>
-<header align="center"><span style="font-weight:bold;font-size:30px">Simulate Voodoo's Donut demand</span></header>
+<header align="center">Voodoo's Donut<img src="Pic/Donuts2.jpeg" style="width:240px;height:120px;"></header>
 <body>
-  <form>
-     <div id="Success" style='display:block'>
-  <p>Staff ID&nbsp;<input type="text"  id="StaffID" placeholder="Input your 10 digits staff id"></p>
-  <p>Password&nbsp;<input type="password" id="StaffPassword"></p>
-  <input type="button"  value="submit" onclick="LogIn()">
-  </div>
-  <div id="ShowMore" style='display:none'>
-  <p id="Location">Pick a Voodoo shop
-<select name="Location"  onchange="show(this)">
-    <option value="0">Locations</option>
-<option value="1">Downtown</option>
-<option value="2">CaptitolHill</option>
-<option value="3">SouthLakeUnion</option>
-<option value="4">Wedgewood</option>
-<option value="5">Ballard</option>
-</select></p>
-<p class="comments">Check by Hours</p>
-  <p><input type="checkbox" name="FirstHour" />7am-8am</p>
-  <p><input type="checkbox" name="SecondHour" />8am-9am</p>
-<p class="comments">Search&nbsp;<input type="text" name="Search" placeholder="Search" /></p>
+<form>
+<div id="Success" style='display:block' class="Name">
+    <p>Staff ID&nbsp;<input type="text"  id="StaffID" placeholder="10 characters Staff ID">&nbsp;&nbsp;Password&nbsp;<input type="password" id="StaffPassword">&nbsp;&nbsp;
+        <input type="button"  value="submit" class="submit" onclick="LogIn()"></p>
 </div>
-</form>
-<div id="table1" style='display:none'>
-    <foot id="d1"></foot>
-<table width="80%" border="1" cellspacing="0" cellpadding="0" borderColor=#00ff99 align="center">
-    <tr>
-        <td colspan="5" align="center">
-            <span style="font-weight:bold;font-size:30px">Downtown</span>
-
-        </td>
-    </tr>
+<div id="ShowMore" style='display:none' class="Detail">
+<p id="Location">Pick a Voodoo shop
+    <select name="Location"  onchange="show(this)">
+        <option value="0">Locations</option>
+        <option value="1">Downtown</option>
+        <option value="2">CaptitolHill</option>
+        <option value="3">SouthLakeUnion</option>
+        <option value="4">Wedgewood</option>
+        <option value="5">Ballard</option>
+    </select></p>
+        <br/>
     <br/>
-    <tr>
-        <td align="center">
-          Time
-        </td>
-        <td align="center">
-         Foot Traffic At This Hour
-        </td>
-        <td align="center">
-            Number of People Enter
-        </td>
-        <td align="center">
-         Donuts Are Needed At This Hour
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            6am-7am
-        </td>
-        <td id="a1">
-        </td>
-        <td id="c1">
-        </td>
-        <td id="b1">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-          7am-8am
-        </td>
-        <td id="a2">
-        </td>
-        <td id="c2">
-        </td>
-        <td id="b2">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-           8am-9am
-        </td>
-        <td id="a3">
-    </td>
-        <td id="c3">
-        </td>
-        <td id="b3">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            9am-10am
-        </td>
-        <td id="a4">
-        </td>
-        <td id="c4">
-        </td>
-        <td id="b4">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            10am-11am
-        </td>
-        <td id="a5">
-        </td>
-        <td id="c5">
-        </td>
-        <td id="b5">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            11am-12pm
-        </td>
-        <td id="a6">
-        </td>
-        <td id="c6">
-        </td>
-        <td id="b6">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            12pm-1pm
-        </td>
-        <td id="a7">
-        </td>
-        <td id="c7">
-        </td>
-        <td id="b7">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            1pm-2pm
-        </td>
-        <td id="a8">
-        </td>
-        <td id="c8">
-        </td>
-        <td id="b8">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-           2pm-3pm
-        </td>
-        <td id="a9">
-        </td>
-        <td id="c9">
-        </td>
-        <td id="b9">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            3pm-4pm
-        </td>
-        <td id="a10">
-        </td>
-        <td id="c10">
-        </td>
-        <td id="b10">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            4pm-5pm
-        </td>
-        <td id="a11">
-        </td>
-        <td id="c11">
-        </td>
-        <td id="b11">
-        </td>
-    </tr>
-</table>
+<table>
+<td>
+        <p>Check by Hours
+       <br/>
+    <p>Morning</p>
+    <p><input type="checkbox" value="6am-7am" name="check" />6am-7am</p>
+    <p><input type="checkbox" value="7am-8am" name="check" />7am-8am</p>
+    <p><input type="checkbox" value="8am-9am" name="check" />8am-9am</p>
+    <p><input type="checkbox" value="9am-10am" name="check" />9am-10am</p>
+    <p><input type="checkbox" value="10am-11am" name="check" />10am-11am</p>
+    <p><input type="checkbox" value="11am-12pm" name="check" />11am-12pm</p></p></td>
+<td>
+    <br/>
+    <br/>
+    <p>Afternoon</p>
+    <p><input type="checkbox" value="12pm-1pm" name="check" />12pm-1pm</p>
+    <p><input type="checkbox" value="1pm-2pm" name="check" />1pm-2pm</p>
+    <p><input type="checkbox" value="2pm-3pm" name="check" />2pm-3pm</p>
+    <p><input type="checkbox" value="3pm-4pm" name="check" />3pm-4pm</p>
+    <p><input type="checkbox" value="4pm-5pm" name="check" />4pm-5pm</p>
+    <p>&nbsp;&nbsp;<input type="button"  value="Search" class="Search" onclick="ShowRow()"></p></td>
+<td>
+<div id="table1" style='display:none'>
+    <foot id="d1" class="d1"></foot>
+    <table width="160%" border="0" cellspacing="0" cellpadding="0" align="center" id="table11">
+        <tr class="tb1Title">
+            <td colspan="5" align="center">
+                Downtown
+            </td>
+        </tr>
+        <br/>
+        <tr class="tb1Sub">
+            <td align="center">
+                Time
+            </td>
+            <td align="center">
+                Foot Traffic At This Hour
+            </td>
+            <td align="center">
+                Number of People Enter
+            </td>
+            <td align="center">
+                Donuts Are Needed At This Hour
+            </td>
+        </tr>
+        <tr align="center" class="tb13">
+            <td id="DT1">
+                6am-7am
+            </td>
+            <td id="a1">
+            </td>
+            <td id="c1">
+            </td>
+            <td id="b1">
+            </td>
+        </tr>
+        <tr align="center" class="tb14">
+            <td id="DT2">
+                7am-8am
+            </td>
+            <td id="a2">
+            </td>
+            <td id="c2">
+            </td>
+            <td id="b2">
+            </td>
+        </tr>
+        <tr align="center" class="tb15">
+            <td id="DT3">
+                8am-9am
+            </td>
+            <td id="a3">
+            </td>
+            <td id="c3">
+            </td>
+            <td id="b3">
+            </td>
+        </tr>
+        <tr align="center" class="tb16">
+            <td id="DT4">
+                9am-10am
+            </td>
+            <td id="a4">
+            </td>
+            <td id="c4">
+            </td>
+            <td id="b4">
+            </td>
+        </tr>
+        <tr align="center" class="tb17">
+            <td id="DT5">
+                10am-11am
+            </td>
+            <td id="a5">
+            </td>
+            <td id="c5">
+            </td>
+            <td id="b5">
+            </td>
+        </tr>
+        <tr align="center" class="tb18">
+            <td id="DT6">
+                11am-12pm
+            </td>
+            <td id="a6">
+            </td>
+            <td id="c6">
+            </td>
+            <td id="b6">
+            </td>
+        </tr>
+        <tr align="center" class="tb19">
+            <td id="DT7">
+                12pm-1pm
+            </td>
+            <td id="a7">
+            </td>
+            <td id="c7">
+            </td>
+            <td id="b7">
+            </td>
+        </tr>
+        <tr align="center" class="tb110">
+            <td id="DT8">
+                1pm-2pm
+            </td>
+            <td id="a8">
+            </td>
+            <td id="c8">
+            </td>
+            <td id="b8">
+            </td>
+        </tr>
+        <tr align="center" class="tb111">
+            <td id="DT9">
+                2pm-3pm
+            </td>
+            <td id="a9">
+            </td>
+            <td id="c9">
+            </td>
+            <td id="b9">
+            </td>
+        </tr>
+        <tr align="center" class="tb112">
+            <td id="DT10">
+                3pm-4pm
+            </td>
+            <td id="a10">
+            </td>
+            <td id="c10">
+            </td>
+            <td id="b10">
+            </td>
+        </tr>
+        <tr align="center" class="tb113">
+            <td id="DT11">
+                4pm-5pm
+            </td>
+            <td id="a11">
+            </td>
+            <td id="c11">
+            </td>
+            <td id="b11">
+            </td>
+        </tr>
+    </table>
 </div>
 <div id="table2" style='display:none'>
-    <foot id="d2"></foot>
-<table width="80%" border="1" cellspacing="0" cellpadding="0" borderColor=#FF0000 align="center">
-    <tr>
-        <td colspan="5" align="center">
-            <span style="font-weight:bold;font-size:30px">CaptitolHill</span>
-
-        </td>
-    </tr>
-    <br/>
-    <tr>
-        <td align="center">
-            Time
-        </td>
-        <td align="center">
-            Foot Traffic At This Hour
-        </td>
-        <td align="center">
-            Number of People Enter
-        </td>
-        <td align="center">
-            Donuts Are Needed At This Hour
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            6am-7am
-        </td>
-        <td id="a01">
-        </td>
-        <td id="c01">
-        </td>
-        <td id="b01">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            7am-8am
-        </td>
-        <td id="a21">
-        </td>
-        <td id="c21">
-        </td>
-        <td id="b21">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            8am-9am
-        </td>
-        <td id="a31">
-        </td>
-        <td id="c31">
-        </td>
-        <td id="b31">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            9am-10am
-        </td>
-        <td id="a41">
-        </td>
-        <td id="c41">
-        </td>
-        <td id="b41">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            10am-11am
-        </td>
-        <td id="a51">
-        </td>
-        <td id="c51">
-        </td>
-        <td id="b51">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            11am-12pm
-        </td>
-        <td id="a61">
-        </td>
-        <td id="c61">
-        </td>
-        <td id="b61">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            12pm-1pm
-        </td>
-        <td id="a71">
-        </td>
-        <td id="c71">
-        </td>
-        <td id="b71">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            1pm-2pm
-        </td>
-        <td id="a81">
-        </td>
-        <td id="c81">
-        </td>
-        <td id="b81">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            2pm-3pm
-        </td>
-        <td id="a91">
-        </td>
-        <td id="c91">
-        </td>
-        <td id="b91">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            3pm-4pm
-        </td>
-        <td id="a101">
-        </td>
-        <td id="c101">
-        </td>
-        <td id="b101">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            4pm-5pm
-        </td>
-        <td id="a111">
-        </td>
-        <td id="c111">
-        </td>
-        <td id="b111">
-        </td>
-    </tr>
-</table>
+    <foot id="d2" class="d2"></foot>
+    <table width="160%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr class="tb2Title">
+            <td colspan="5" align="center">
+                CaptitolHill
+            </td>
+        </tr>
+        <br/>
+        <tr class="tb2Sub">
+            <td align="center">
+                Time
+            </td>
+            <td align="center">
+                Foot Traffic At This Hour
+            </td>
+            <td align="center">
+                Number of People Enter
+            </td>
+            <td align="center">
+                Donuts Are Needed At This Hour
+            </td>
+        </tr>
+        <tr align="center" class="tb23">
+            <td>
+                6am-7am
+            </td>
+            <td id="a01">
+            </td>
+            <td id="c01">
+            </td>
+            <td id="b01">
+            </td>
+        </tr>
+        <tr align="center"  class="tb24">
+            <td>
+                7am-8am
+            </td>
+            <td id="a21">
+            </td>
+            <td id="c21">
+            </td>
+            <td id="b21">
+            </td>
+        </tr>
+        <tr align="center"  class="tb25">
+            <td>
+                8am-9am
+            </td>
+            <td id="a31">
+            </td>
+            <td id="c31">
+            </td>
+            <td id="b31">
+            </td>
+        </tr>
+        <tr align="center"  class="tb26">
+            <td>
+                9am-10am
+            </td>
+            <td id="a41">
+            </td>
+            <td id="c41">
+            </td>
+            <td id="b41">
+            </td>
+        </tr>
+        <tr align="center"  class="tb27">
+            <td>
+                10am-11am
+            </td>
+            <td id="a51">
+            </td>
+            <td id="c51">
+            </td>
+            <td id="b51">
+            </td>
+        </tr>
+        <tr align="center"  class="tb28">
+            <td>
+                11am-12pm
+            </td>
+            <td id="a61">
+            </td>
+            <td id="c61">
+            </td>
+            <td id="b61">
+            </td>
+        </tr>
+        <tr align="center"  class="tb29">
+            <td>
+                12pm-1pm
+            </td>
+            <td id="a71">
+            </td>
+            <td id="c71">
+            </td>
+            <td id="b71">
+            </td>
+        </tr>
+        <tr align="center"  class="tb210">
+            <td>
+                1pm-2pm
+            </td>
+            <td id="a81">
+            </td>
+            <td id="c81">
+            </td>
+            <td id="b81">
+            </td>
+        </tr>
+        <tr align="center"  class="tb211">
+            <td>
+                2pm-3pm
+            </td>
+            <td id="a91">
+            </td>
+            <td id="c91">
+            </td>
+            <td id="b91">
+            </td>
+        </tr>
+        <tr align="center"  class="tb212">
+            <td>
+                3pm-4pm
+            </td>
+            <td id="a101">
+            </td>
+            <td id="c101">
+            </td>
+            <td id="b101">
+            </td>
+        </tr>
+        <tr align="center"  class="tb213">
+            <td>
+                4pm-5pm
+            </td>
+            <td id="a111">
+            </td>
+            <td id="c111">
+            </td>
+            <td id="b111">
+            </td>
+        </tr>
+    </table>
 </div>
 <div id="table3" style='display:none'>
-    <foot id="d3"></foot>
-<table width="80%" border="1" cellspacing="0" cellpadding="0" borderColor=#000079 align="center">
-    <tr>
-        <td colspan="5" align="center">
-            <span style="font-weight:bold;font-size:30px">SouthLakeUnion</span>
-
-        </td>
-    </tr>
-    <br/>
-    <tr>
-        <td align="center">
-            Time
-        </td>
-        <td align="center">
-            Foot Traffic At This Hour
-        </td>
-        <td align="center">
-            Number of People Enter
-        </td>
-        <td align="center">
-            Donuts Are Needed At This Hour
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            6am-7am
-        </td>
-        <td id="e01">
-        </td>
-        <td id="g01">
-        </td>
-        <td id="f01">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            7am-8am
-        </td>
-        <td id="e21">
-        </td>
-        <td id="g21">
-        </td>
-        <td id="f21">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            8am-9am
-        </td>
-        <td id="e31">
-        </td>
-        <td id="g31">
-        </td>
-        <td id="f31">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            9am-10am
-        </td>
-        <td id="e41">
-        </td>
-        <td id="g41">
-        </td>
-        <td id="f41">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            10am-11am
-        </td>
-        <td id="e51">
-        </td>
-        <td id="g51">
-        </td>
-        <td id="f51">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            11am-12pm
-        </td>
-        <td id="e61">
-        </td>
-        <td id="g61">
-        </td>
-        <td id="f61">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            12pm-1pm
-        </td>
-        <td id="e71">
-        </td>
-        <td id="g71">
-        </td>
-        <td id="f71">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            1pm-2pm
-        </td>
-        <td id="e81">
-        </td>
-        <td id="g81">
-        </td>
-        <td id="f81">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            2pm-3pm
-        </td>
-        <td id="e91">
-        </td>
-        <td id="g91">
-        </td>
-        <td id="f91">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            3pm-4pm
-        </td>
-        <td id="e101">
-        </td>
-        <td id="g101">
-        </td>
-        <td id="f101">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            4pm-5pm
-        </td>
-        <td id="e111">
-        </td>
-        <td id="g111">
-        </td>
-        <td id="f111">
-        </td>
-    </tr>
-</table>
+    <foot id="d3" class="d3"></foot>
+    <table width="160%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr class="tb3Title">
+            <td colspan="5" align="center">
+                SouthLakeUnion
+            </td>
+        </tr>
+        <br/>
+        <tr class="tb3Sub">
+            <td align="center">
+                Time
+            </td>
+            <td align="center">
+                Foot Traffic At This Hour
+            </td>
+            <td align="center">
+                Number of People Enter
+            </td>
+            <td align="center">
+                Donuts Are Needed At This Hour
+            </td>
+        </tr>
+        <tr align="center" class="tb33">
+            <td>
+                6am-7am
+            </td>
+            <td id="e01">
+            </td>
+            <td id="g01">
+            </td>
+            <td id="f01">
+            </td>
+        </tr>
+        <tr align="center" class="tb34">
+            <td>
+                7am-8am
+            </td>
+            <td id="e21">
+            </td>
+            <td id="g21">
+            </td>
+            <td id="f21">
+            </td>
+        </tr>
+        <tr align="center" class="tb35">
+            <td>
+                8am-9am
+            </td>
+            <td id="e31">
+            </td>
+            <td id="g31">
+            </td>
+            <td id="f31">
+            </td>
+        </tr>
+        <tr align="center" class="tb36">
+            <td>
+                9am-10am
+            </td>
+            <td id="e41">
+            </td>
+            <td id="g41">
+            </td>
+            <td id="f41">
+            </td>
+        </tr>
+        <tr align="center" class="tb37">
+            <td>
+                10am-11am
+            </td>
+            <td id="e51">
+            </td>
+            <td id="g51">
+            </td>
+            <td id="f51">
+            </td>
+        </tr>
+        <tr align="center" class="tb38">
+            <td>
+                11am-12pm
+            </td>
+            <td id="e61">
+            </td>
+            <td id="g61">
+            </td>
+            <td id="f61">
+            </td>
+        </tr>
+        <tr align="center" class="tb39">
+            <td>
+                12pm-1pm
+            </td>
+            <td id="e71">
+            </td>
+            <td id="g71">
+            </td>
+            <td id="f71">
+            </td>
+        </tr>
+        <tr align="center" class="tb310">
+            <td>
+                1pm-2pm
+            </td>
+            <td id="e81">
+            </td>
+            <td id="g81">
+            </td>
+            <td id="f81">
+            </td>
+        </tr>
+        <tr align="center" class="tb311">
+            <td>
+                2pm-3pm
+            </td>
+            <td id="e91">
+            </td>
+            <td id="g91">
+            </td>
+            <td id="f91">
+            </td>
+        </tr>
+        <tr align="center" class="tb312">
+            <td>
+                3pm-4pm
+            </td>
+            <td id="e101">
+            </td>
+            <td id="g101">
+            </td>
+            <td id="f101">
+            </td>
+        </tr>
+        <tr align="center" class="tb313">
+            <td>
+                4pm-5pm
+            </td>
+            <td id="e111">
+            </td>
+            <td id="g111">
+            </td>
+            <td id="f111">
+            </td>
+        </tr>
+    </table>
 </div>
 <div id="table4" style='display:none'>
-    <foot id="d4"></foot>
-<table width="80%" border="1" cellspacing="0" cellpadding="0" borderColor=#F9F900 align="center">
-    <tr>
-        <td colspan="5" align="center">
-            <span style="font-weight:bold;font-size:30px">Wedgewood</span>
+    <foot id="d4" class="d4"></foot>
+    <table width="160%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr class="tb4Title">
+            <td colspan="5" align="center">
+                Wedgewood
 
-        </td>
-    </tr>
-    <br/>
-    <tr>
-        <td align="center">
-          Time
-        </td>
-        <td align="center">
-         Foot Traffic At This Hour
-        </td>
-        <td align="center">
-            Number of People Enter
-        </td>
-        <td align="center">
-         Donuts Are Needed At This Hour
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            6am-7am
-        </td>
-        <td id="e1">
-        </td>
-        <td id="g1">
-        </td>
-        <td id="f1">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-          7am-8am
-        </td>
-        <td id="e2">
-        </td>
-        <td id="g2">
-        </td>
-        <td id="f2">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-           8am-9am
-        </td>
-        <td id="e3">
-    </td>
-        <td id="g3">
-        </td>
-        <td id="f3">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            9am-10am
-        </td>
-        <td id="e4">
-        </td>
-        <td id="g4">
-        </td>
-        <td id="f4">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            10am-11am
-        </td>
-        <td id="e5">
-        </td>
-        <td id="g5">
-        </td>
-        <td id="f5">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            11am-12pm
-        </td>
-        <td id="e6">
-        </td>
-        <td id="g6">
-        </td>
-        <td id="f6">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            12pm-1pm
-        </td>
-        <td id="e7">
-        </td>
-        <td id="g7">
-        </td>
-        <td id="f7">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            1pm-2pm
-        </td>
-        <td id="e8">
-        </td>
-        <td id="g8">
-        </td>
-        <td id="f8">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-           2pm-3pm
-        </td>
-        <td id="e9">
-        </td>
-        <td id="g9">
-        </td>
-        <td id="f9">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            3pm-4pm
-        </td>
-        <td id="e10">
-        </td>
-        <td id="g10">
-        </td>
-        <td id="f10">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            4pm-5pm
-        </td>
-        <td id="e11">
-        </td>
-        <td id="g11">
-        </td>
-        <td id="f11">
-        </td>
-    </tr>
-</table>
+            </td>
+        </tr>
+        <br/>
+        <tr class="tb4Sub">
+            <td align="center">
+                Time
+            </td>
+            <td align="center">
+                Foot Traffic At This Hour
+            </td>
+            <td align="center">
+                Number of People Enter
+            </td>
+            <td align="center">
+                Donuts Are Needed At This Hour
+            </td>
+        </tr>
+        <tr align="center" class="tb43">
+            <td>
+                6am-7am
+            </td>
+            <td id="e1">
+            </td>
+            <td id="g1">
+            </td>
+            <td id="f1">
+            </td>
+        </tr>
+        <tr align="center" class="tb44">
+            <td>
+                7am-8am
+            </td>
+            <td id="e2">
+            </td>
+            <td id="g2">
+            </td>
+            <td id="f2">
+            </td>
+        </tr>
+        <tr align="center" class="tb45">
+            <td>
+                8am-9am
+            </td>
+            <td id="e3">
+            </td>
+            <td id="g3">
+            </td>
+            <td id="f3">
+            </td>
+        </tr>
+        <tr align="center" class="tb46">
+            <td>
+                9am-10am
+            </td>
+            <td id="e4">
+            </td>
+            <td id="g4">
+            </td>
+            <td id="f4">
+            </td>
+        </tr>
+        <tr align="center" class="tb47">
+            <td>
+                10am-11am
+            </td>
+            <td id="e5">
+            </td>
+            <td id="g5">
+            </td>
+            <td id="f5">
+            </td>
+        </tr>
+        <tr align="center" class="tb48">
+            <td>
+                11am-12pm
+            </td>
+            <td id="e6">
+            </td>
+            <td id="g6">
+            </td>
+            <td id="f6">
+            </td>
+        </tr>
+        <tr align="center" class="tb49">
+            <td>
+                12pm-1pm
+            </td>
+            <td id="e7">
+            </td>
+            <td id="g7">
+            </td>
+            <td id="f7">
+            </td>
+        </tr>
+        <tr align="center" class="tb410">
+            <td>
+                1pm-2pm
+            </td>
+            <td id="e8">
+            </td>
+            <td id="g8">
+            </td>
+            <td id="f8">
+            </td>
+        </tr>
+        <tr align="center" class="tb411">
+            <td>
+                2pm-3pm
+            </td>
+            <td id="e9">
+            </td>
+            <td id="g9">
+            </td>
+            <td id="f9">
+            </td>
+        </tr>
+        <tr align="center" class="tb412">
+            <td>
+                3pm-4pm
+            </td>
+            <td id="e10">
+            </td>
+            <td id="g10">
+            </td>
+            <td id="f10">
+            </td>
+        </tr>
+        <tr align="center" class="tb413">
+            <td>
+                4pm-5pm
+            </td>
+            <td id="e11">
+            </td>
+            <td id="g11">
+            </td>
+            <td id="f11">
+            </td>
+        </tr>
+    </table>
 </div>
 <div id="table5" style='display:none'>
-    <foot id="d5"></foot>
-<table width="80%" border="1" cellspacing="0" cellpadding="0"  align="center">
-    <tr>
-        <td colspan="5" align="center">
-            <span style="font-weight:bold;font-size:30px">Ballard</span>
+    <foot id="d5" class="d5"></foot>
+    <table width="160%" border="0" cellspacing="0" cellpadding="0"  align="center">
+        <tr class="tb5Title">
+            <td colspan="5" align="center">
+                Ballard
 
-        </td>
-    </tr>
-    <br/>
-    <tr>
-        <td align="center">
-          Time
-        </td>
-        <td align="center">
-         Foot Traffic At This Hour
-        </td>
-        <td align="center">
-            Number of People Enter
-        </td>
-        <td align="center">
-         Donuts Are Needed At This Hour
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            6am-7am
-        </td>
-        <td id="h1">
-        </td>
-        <td id="m1">
-        </td>
-        <td id="k1">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-          7am-8am
-        </td>
-        <td id="h2">
-        </td>
-        <td id="m2">
-        </td>
-        <td id="k2">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-           8am-9am
-        </td>
-        <td id="h3">
-    </td>
-        <td id="m3">
-        </td>
-        <td id="k3">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            9am-10am
-        </td>
-        <td id="h4">
-        </td>
-        <td id="m4">
-        </td>
-        <td id="k4">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            10am-11am
-        </td>
-        <td id="h5">
-        </td>
-        <td id="m5">
-        </td>
-        <td id="k5">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            11am-12pm
-        </td>
-        <td id="h6">
-        </td>
-        <td id="m6">
-        </td>
-        <td id="k6">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            12pm-1pm
-        </td>
-        <td id="h7">
-        </td>
-        <td id="m7">
-        </td>
-        <td id="k7">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            1pm-2pm
-        </td>
-        <td id="h8">
-        </td>
-        <td id="m8">
-        </td>
-        <td id="k8">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-           2pm-3pm
-        </td>
-        <td id="h9">
-        </td>
-        <td id="m9">
-        </td>
-        <td id="k9">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            3pm-4pm
-        </td>
-        <td id="h10">
-        </td>
-        <td id="m10">
-        </td>
-        <td id="k10">
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-            4pm-5pm
-        </td>
-        <td id="h11">
-        </td>
-        <td id="m11">
-        </td>
-        <td id="k11">
-        </td>
-    </tr>
+            </td>
+        </tr>
+        <br/>
+        <tr class="tb5Sub">
+            <td align="center">
+                Time
+            </td>
+            <td align="center">
+                Foot Traffic At This Hour
+            </td>
+            <td align="center">
+                Number of People Enter
+            </td>
+            <td align="center">
+                Donuts Are Needed At This Hour
+            </td>
+        </tr>
+        <tr align="center" class="tb53">
+            <td>
+                6am-7am
+            </td>
+            <td id="h1">
+            </td>
+            <td id="m1">
+            </td>
+            <td id="k1">
+            </td>
+        </tr>
+        <tr align="center" class="tb54">
+            <td>
+                7am-8am
+            </td>
+            <td id="h2">
+            </td>
+            <td id="m2">
+            </td>
+            <td id="k2">
+            </td>
+        </tr>
+        <tr align="center"  class="tb55">
+            <td>
+                8am-9am
+            </td>
+            <td id="h3">
+            </td>
+            <td id="m3">
+            </td>
+            <td id="k3">
+            </td>
+        </tr>
+        <tr align="center"  class="tb56">
+            <td>
+                9am-10am
+            </td>
+            <td id="h4">
+            </td>
+            <td id="m4">
+            </td>
+            <td id="k4">
+            </td>
+        </tr>
+        <tr align="center"  class="tb57">
+            <td>
+                10am-11am
+            </td>
+            <td id="h5">
+            </td>
+            <td id="m5">
+            </td>
+            <td id="k5">
+            </td>
+        </tr>
+        <tr align="center"  class="tb58">
+            <td>
+                11am-12pm
+            </td>
+            <td id="h6">
+            </td>
+            <td id="m6">
+            </td>
+            <td id="k6">
+            </td>
+        </tr>
+        <tr align="center"  class="tb59">
+            <td>
+                12pm-1pm
+            </td>
+            <td id="h7">
+            </td>
+            <td id="m7">
+            </td>
+            <td id="k7">
+            </td>
+        </tr>
+        <tr align="center"  class="tb510">
+            <td>
+                1pm-2pm
+            </td>
+            <td id="h8">
+            </td>
+            <td id="m8">
+            </td>
+            <td id="k8">
+            </td>
+        </tr>
+        <tr align="center"  class="tb511">
+            <td>
+                2pm-3pm
+            </td>
+            <td id="h9">
+            </td>
+            <td id="m9">
+            </td>
+            <td id="k9">
+            </td>
+        </tr>
+        <tr align="center"  class="tb512">
+            <td>
+                3pm-4pm
+            </td>
+            <td id="h10">
+            </td>
+            <td id="m10">
+            </td>
+            <td id="k10">
+            </td>
+        </tr>
+        <tr align="center"  class="tb513">
+            <td>
+                4pm-5pm
+            </td>
+            <td id="h11">
+            </td>
+            <td id="m11">
+            </td>
+            <td id="k11">
+            </td>
+        </tr>
+    </table>
+</div>
+</td>
 </table>
 </div>
+</form>
 <script type="text/javascript">
+//Checkbox Search
+function ShowRow(){
+    for (v=0;v<11;v++){
+    var tempTd=document.getElementById("table11");
+    var check_array=document.getElementsByName("check");
+    var rows=tempTd.rows;
+        if (check_array[v].checked==true){
+alert(rows[v+2].innerHTML);
+}
+}
+}
 //Verify username and password
 function LogIn(){
     var LogInCheckUsername = document.getElementById('StaffID').value;
     var LogInCheckPassword = document.getElementById('StaffPassword').value;
     var divmore = document.getElementById('ShowMore');
     var Success = document.getElementById('Success');
-if (LogInCheckUsername.length<10 || LogInCheckUsername.length>10){
-    alert("Staff ID should be exactly 10 digits");
-}
+    if (LogInCheckUsername.length<10 || LogInCheckUsername.length>10){
+        alert("Staff ID must be exactly 10 characters");
+    }
     else if(LogInCheckUsername == 'Fantastic1' && LogInCheckPassword == 'Fantastic1'){
-divmore.style.display = 'block';
-Success.style.display = 'none';
+        divmore.style.display = 'block';
+        Success.style.display = 'none';
     }else{
         divmore.style.display = 'none';
-        alert("Maybe Wrong Staff ID or Password");
+        alert("Wrong Staff ID or Password");
     }
-
 }
-
 //Show and hidden tables
-      function show(obj){
-     var selectedvalue = obj.value;
-  if(selectedvalue==''){
-     selectedvalue = '-1';
-  }
-
-  for(i=1;i<=5;i++){
-    var divobj = document.getElementById('table'+i);
-    if(parseInt(selectedvalue)==i){
-       divobj.style.display = 'block';
-    }else{
-       divobj.style.display = 'none';
+function show(obj){
+    var selectedvalue = obj.value;
+    if(selectedvalue==''){
+        selectedvalue = '-1';
     }
-  }
+
+    for(j=1;j<=5;j++){
+        var divobj = document.getElementById('table'+j);
+        if(parseInt(selectedvalue)==j){
+            divobj.style.display = 'block';
+        }else{
+            divobj.style.display = 'none';
+        }
+    }
 }
 
-    var Downtown = {
-        HoursOfOperation : 11,//from 7a-6p, operation hour is 11
-        HourlyFootTraffic: [], //randomize a number from hourly foot traffic range
-        PercentEntering : 0.1,//10%
-        NumberOfDonutsOrderdPerEnt:4
-    };
-    var CaptitolHill = {
-        HoursOfOperation : 11,
-        HourlyFootTraffic : [],
-        PercentEntering : 0.45,
-        NumberOfDonutsOrderdPerEnt:2
-    };
-    var SouthLakeUnion = {
-        HoursOfOperation : 11,
-        HourlyFootTraffic : [],
-        PercentEntering : 0.05,
-        NumberOfDonutsOrderdPerEnt:6
-    };
-    var Wedgewood = {
-        HoursOfOperation : 11,
-        HourlyFootTraffic : [],
-        PercentEntering : 0.2,
-        NumberOfDonutsOrderdPerEnt:1.5
-    };
-    var Ballard = {
-        HoursOfOperation : 11,
-        HourlyFootTraffic : [],
-        PercentEntering : 0.33,
-        NumberOfDonutsOrderdPerEnt:1
-    };
-    var x1 = 0,//make Downtown.HourlyFootTraffic[i] integer
-        x2 = 0;//make CaptitolHill.HourlyFootTraffic[i] integer
-        x3 = 0;//
-        x4 = 0;
-        x5 = 0;
-    for (i=1;i<=Downtown.HoursOfOperation;i++) {
-        Downtown.HourlyFootTraffic[i] = Math.floor(Math.random() * 141 + 80);
-        CaptitolHill.HourlyFootTraffic[i]= Math.floor(Math.random() * 41 + 5);
-        SouthLakeUnion.HourlyFootTraffic[i] = Math.floor(Math.random() * 71 + 180);
-        Wedgewood.HourlyFootTraffic[i] = Math.floor(Math.random() * 41 + 20);
-        Ballard.HourlyFootTraffic[i] = Math.floor(Math.random() * 151 + 25);
-        x1 += parseInt(Downtown.HourlyFootTraffic[i]);
-        x2 += parseInt(CaptitolHill.HourlyFootTraffic[i]);
-        x3 += parseInt(SouthLakeUnion.HourlyFootTraffic[i]);
-        x4 += parseInt(Wedgewood.HourlyFootTraffic[i]);
-        x5 += parseInt(Ballard.HourlyFootTraffic[i]);
-        //console.log("Downtown.HourlyFootTraffic is " + x1);
-        //console.log("CaptitolHill.HourlyFootTraffic is " + x2);
-    }
-    // Foot Traffic At This Hour
-    a1.innerHTML = Downtown.HourlyFootTraffic[1];
-    a2.innerHTML = Downtown.HourlyFootTraffic[2];
-    a3.innerHTML = Downtown.HourlyFootTraffic[3];
-    a4.innerHTML = Downtown.HourlyFootTraffic[4];
-    a5.innerHTML = Downtown.HourlyFootTraffic[5];
-    a6.innerHTML = Downtown.HourlyFootTraffic[6];
-    a7.innerHTML = Downtown.HourlyFootTraffic[7];
-    a8.innerHTML = Downtown.HourlyFootTraffic[8];
-    a9.innerHTML = Downtown.HourlyFootTraffic[9];
-    a10.innerHTML = Downtown.HourlyFootTraffic[10];
-    a11.innerHTML = Downtown.HourlyFootTraffic[11];
-    // Donuts Needed At This Hour
-    b1.innerHTML = Math.floor((a1.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
-    b2.innerHTML = Math.floor((a2.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
-    b3.innerHTML = Math.floor((a3.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
-    b4.innerHTML = Math.floor((a4.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
-    b5.innerHTML = Math.floor((a5.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
-    b6.innerHTML = Math.floor((a6.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
-    b7.innerHTML = Math.floor((a7.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
-    b8.innerHTML = Math.floor((a8.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
-    b9.innerHTML = Math.floor((a9.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
-    b10.innerHTML = Math.floor((a10.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
-    b11.innerHTML = Math.floor((a11.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
-    //number of people enter
-    c1.innerHTML = Math.floor(a1.innerHTML * Downtown.PercentEntering);
-    c2.innerHTML = Math.floor(a2.innerHTML * Downtown.PercentEntering);
-    c3.innerHTML = Math.floor(a3.innerHTML * Downtown.PercentEntering);
-    c4.innerHTML = Math.floor(a4.innerHTML * Downtown.PercentEntering);
-    c5.innerHTML = Math.floor(a5.innerHTML * Downtown.PercentEntering);
-    c6.innerHTML = Math.floor(a6.innerHTML * Downtown.PercentEntering);
-    c7.innerHTML = Math.floor(a7.innerHTML * Downtown.PercentEntering);
-    c8.innerHTML = Math.floor(a8.innerHTML * Downtown.PercentEntering);
-    c9.innerHTML = Math.floor(a9.innerHTML * Downtown.PercentEntering);
-    c10.innerHTML = Math.floor(a10.innerHTML * Downtown.PercentEntering);
-    c11.innerHTML = Math.floor(a11.innerHTML * Downtown.PercentEntering);
-    //Total Numbers Of Donuts Needed For WholeDay
-    d1.innerHTML = "Total Numbers Of Donuts Needed For WholeDay In Downtown: " + Math.floor(x1 * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
-    console.log(d1.innerHTML);
-    //#2
-    a01.innerHTML = CaptitolHill.HourlyFootTraffic[1];
-    a21.innerHTML = CaptitolHill.HourlyFootTraffic[2];
-    a31.innerHTML = CaptitolHill.HourlyFootTraffic[3];
-    a41.innerHTML = CaptitolHill.HourlyFootTraffic[4];
-    a51.innerHTML = CaptitolHill.HourlyFootTraffic[5];
-    a61.innerHTML = CaptitolHill.HourlyFootTraffic[6];
-    a71.innerHTML = CaptitolHill.HourlyFootTraffic[7];
-    a81.innerHTML = CaptitolHill.HourlyFootTraffic[8];
-    a91.innerHTML = CaptitolHill.HourlyFootTraffic[9];
-    a101.innerHTML = CaptitolHill.HourlyFootTraffic[10];
-    a111.innerHTML = CaptitolHill.HourlyFootTraffic[11];
-    // Donuts Needed At This Hour
-    b01.innerHTML = Math.floor((a01.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
-    b21.innerHTML = Math.floor((a21.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
-    b31.innerHTML = Math.floor((a31.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
-    b41.innerHTML = Math.floor((a41.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
-    b51.innerHTML = Math.floor((a51.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
-    b61.innerHTML = Math.floor((a61.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
-    b71.innerHTML = Math.floor((a71.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
-    b81.innerHTML = Math.floor((a81.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
-    b91.innerHTML = Math.floor((a91.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
-    b101.innerHTML = Math.floor((a101.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
-    b111.innerHTML = Math.floor((a111.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
-    //number of people enter
-    c01.innerHTML = Math.floor(a01.innerHTML * CaptitolHill.PercentEntering);
-    c21.innerHTML = Math.floor(a21.innerHTML * CaptitolHill.PercentEntering);
-    c31.innerHTML = Math.floor(a31.innerHTML * CaptitolHill.PercentEntering);
-    c41.innerHTML = Math.floor(a41.innerHTML * CaptitolHill.PercentEntering);
-    c51.innerHTML = Math.floor(a51.innerHTML * CaptitolHill.PercentEntering);
-    c61.innerHTML = Math.floor(a61.innerHTML * CaptitolHill.PercentEntering);
-    c71.innerHTML = Math.floor(a71.innerHTML * CaptitolHill.PercentEntering);
-    c81.innerHTML = Math.floor(a81.innerHTML * CaptitolHill.PercentEntering);
-    c91.innerHTML = Math.floor(a91.innerHTML * CaptitolHill.PercentEntering);
-    c101.innerHTML = Math.floor(a101.innerHTML * CaptitolHill.PercentEntering);
-    c111.innerHTML = Math.floor(a111.innerHTML * CaptitolHill.PercentEntering);
-    //Total Numbers Of Donuts Needed For WholeDay
-    d2.innerHTML = "Total Numbers Of Donuts Needed For WholeDay In CaptitolHill: " + Math.floor(x2 * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
-    console.log(d2.innerHTML);
+//randomize a number from hourly foot traffic range
+function RanDom(min, max){
+    var HourlyFoot = Math.floor(Math.random() * (max-min+1) + min);
+    return HourlyFoot;
+}
+
+var Downtown = {
+    HoursOfOperation : 11,//from 7a-6p, operation hour is 11
+    HourlyFootTraffic: [], //hourly foot traffic range
+    PercentEntering : 0.1,//10%
+    NumberOfDonutsOrderdPerEnt:4
+};
+var CaptitolHill = {
+    HoursOfOperation : 11,
+    HourlyFootTraffic : [],
+    PercentEntering : 0.45,
+    NumberOfDonutsOrderdPerEnt:2
+};
+var SouthLakeUnion = {
+    HoursOfOperation : 11,
+    HourlyFootTraffic : [],
+    PercentEntering : 0.05,
+    NumberOfDonutsOrderdPerEnt:6
+};
+var Wedgewood = {
+    HoursOfOperation : 11,
+    HourlyFootTraffic : [],
+    PercentEntering : 0.2,
+    NumberOfDonutsOrderdPerEnt:1.5
+};
+var Ballard = {
+    HoursOfOperation : 11,
+    HourlyFootTraffic : [],
+    PercentEntering : 0.33,
+    NumberOfDonutsOrderdPerEnt:1
+};
+var x1 = 0;
+x2 = 0;
+x3 = 0;
+x4 = 0;
+x5 = 0;
+for (i=1;i<=Downtown.HoursOfOperation;i++) {
+    Downtown.HourlyFootTraffic[i] = RanDom(80,220);
+    CaptitolHill.HourlyFootTraffic[i]= RanDom(5,45);
+    SouthLakeUnion.HourlyFootTraffic[i] = RanDom(180,250);
+    Wedgewood.HourlyFootTraffic[i] = RanDom(20,60);
+    Ballard.HourlyFootTraffic[i] = RanDom(25,175);
+    x1 += parseInt(Downtown.HourlyFootTraffic[i]);//make Downtown.HourlyFootTraffic[i] integer and sum
+    x2 += parseInt(CaptitolHill.HourlyFootTraffic[i]);
+    x3 += parseInt(SouthLakeUnion.HourlyFootTraffic[i]);
+    x4 += parseInt(Wedgewood.HourlyFootTraffic[i]);
+    x5 += parseInt(Ballard.HourlyFootTraffic[i]);
+    //console.log("Downtown.HourlyFootTraffic is " + x1);
+    //console.log("CaptitolHill.HourlyFootTraffic is " + x2);
+}
+// Foot Traffic At This Hour
+a1.innerHTML = Downtown.HourlyFootTraffic[1];
+a2.innerHTML = Downtown.HourlyFootTraffic[2];
+a3.innerHTML = Downtown.HourlyFootTraffic[3];
+a4.innerHTML = Downtown.HourlyFootTraffic[4];
+a5.innerHTML = Downtown.HourlyFootTraffic[5];
+a6.innerHTML = Downtown.HourlyFootTraffic[6];
+a7.innerHTML = Downtown.HourlyFootTraffic[7];
+a8.innerHTML = Downtown.HourlyFootTraffic[8];
+a9.innerHTML = Downtown.HourlyFootTraffic[9];
+a10.innerHTML = Downtown.HourlyFootTraffic[10];
+a11.innerHTML = Downtown.HourlyFootTraffic[11];
+// Donuts Needed At This Hour
+b1.innerHTML = Math.floor((a1.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
+b2.innerHTML = Math.floor((a2.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
+b3.innerHTML = Math.floor((a3.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
+b4.innerHTML = Math.floor((a4.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
+b5.innerHTML = Math.floor((a5.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
+b6.innerHTML = Math.floor((a6.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
+b7.innerHTML = Math.floor((a7.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
+b8.innerHTML = Math.floor((a8.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
+b9.innerHTML = Math.floor((a9.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
+b10.innerHTML = Math.floor((a10.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
+b11.innerHTML = Math.floor((a11.innerHTML) * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
+//number of people enter
+c1.innerHTML = Math.floor(a1.innerHTML * Downtown.PercentEntering);
+c2.innerHTML = Math.floor(a2.innerHTML * Downtown.PercentEntering);
+c3.innerHTML = Math.floor(a3.innerHTML * Downtown.PercentEntering);
+c4.innerHTML = Math.floor(a4.innerHTML * Downtown.PercentEntering);
+c5.innerHTML = Math.floor(a5.innerHTML * Downtown.PercentEntering);
+c6.innerHTML = Math.floor(a6.innerHTML * Downtown.PercentEntering);
+c7.innerHTML = Math.floor(a7.innerHTML * Downtown.PercentEntering);
+c8.innerHTML = Math.floor(a8.innerHTML * Downtown.PercentEntering);
+c9.innerHTML = Math.floor(a9.innerHTML * Downtown.PercentEntering);
+c10.innerHTML = Math.floor(a10.innerHTML * Downtown.PercentEntering);
+c11.innerHTML = Math.floor(a11.innerHTML * Downtown.PercentEntering);
+//Total Numbers Of Donuts Needed For WholeDay
+d1.innerHTML = "Total Numbers Of Donuts Needed For WholeDay In Downtown: " + Math.floor(x1 * Downtown.PercentEntering * Downtown.NumberOfDonutsOrderdPerEnt);
+console.log(d1.innerHTML);
+//#2
+a01.innerHTML = CaptitolHill.HourlyFootTraffic[1];
+a21.innerHTML = CaptitolHill.HourlyFootTraffic[2];
+a31.innerHTML = CaptitolHill.HourlyFootTraffic[3];
+a41.innerHTML = CaptitolHill.HourlyFootTraffic[4];
+a51.innerHTML = CaptitolHill.HourlyFootTraffic[5];
+a61.innerHTML = CaptitolHill.HourlyFootTraffic[6];
+a71.innerHTML = CaptitolHill.HourlyFootTraffic[7];
+a81.innerHTML = CaptitolHill.HourlyFootTraffic[8];
+a91.innerHTML = CaptitolHill.HourlyFootTraffic[9];
+a101.innerHTML = CaptitolHill.HourlyFootTraffic[10];
+a111.innerHTML = CaptitolHill.HourlyFootTraffic[11];
+// Donuts Needed At This Hour
+b01.innerHTML = Math.floor((a01.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+b21.innerHTML = Math.floor((a21.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+b31.innerHTML = Math.floor((a31.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+b41.innerHTML = Math.floor((a41.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+b51.innerHTML = Math.floor((a51.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+b61.innerHTML = Math.floor((a61.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+b71.innerHTML = Math.floor((a71.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+b81.innerHTML = Math.floor((a81.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+b91.innerHTML = Math.floor((a91.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+b101.innerHTML = Math.floor((a101.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+b111.innerHTML = Math.floor((a111.innerHTML) * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+//number of people enter
+c01.innerHTML = Math.floor(a01.innerHTML * CaptitolHill.PercentEntering);
+c21.innerHTML = Math.floor(a21.innerHTML * CaptitolHill.PercentEntering);
+c31.innerHTML = Math.floor(a31.innerHTML * CaptitolHill.PercentEntering);
+c41.innerHTML = Math.floor(a41.innerHTML * CaptitolHill.PercentEntering);
+c51.innerHTML = Math.floor(a51.innerHTML * CaptitolHill.PercentEntering);
+c61.innerHTML = Math.floor(a61.innerHTML * CaptitolHill.PercentEntering);
+c71.innerHTML = Math.floor(a71.innerHTML * CaptitolHill.PercentEntering);
+c81.innerHTML = Math.floor(a81.innerHTML * CaptitolHill.PercentEntering);
+c91.innerHTML = Math.floor(a91.innerHTML * CaptitolHill.PercentEntering);
+c101.innerHTML = Math.floor(a101.innerHTML * CaptitolHill.PercentEntering);
+c111.innerHTML = Math.floor(a111.innerHTML * CaptitolHill.PercentEntering);
+//Total Numbers Of Donuts Needed For WholeDay
+d2.innerHTML = "Total Numbers Of Donuts Needed For WholeDay In CaptitolHill: " + Math.floor(x2 * CaptitolHill.PercentEntering * CaptitolHill.NumberOfDonutsOrderdPerEnt);
+console.log(d2.innerHTML);
 //#3
 e01.innerHTML = SouthLakeUnion.HourlyFootTraffic[1];
-    e21.innerHTML = SouthLakeUnion.HourlyFootTraffic[2];
-    e31.innerHTML = SouthLakeUnion.HourlyFootTraffic[3];
-    e41.innerHTML = SouthLakeUnion.HourlyFootTraffic[4];
-    e51.innerHTML = SouthLakeUnion.HourlyFootTraffic[5];
-    e61.innerHTML = SouthLakeUnion.HourlyFootTraffic[6];
-    e71.innerHTML = SouthLakeUnion.HourlyFootTraffic[7];
-    e81.innerHTML = SouthLakeUnion.HourlyFootTraffic[8];
-    e91.innerHTML = SouthLakeUnion.HourlyFootTraffic[9];
-    e101.innerHTML = SouthLakeUnion.HourlyFootTraffic[10];
-    e111.innerHTML = SouthLakeUnion.HourlyFootTraffic[11];
-    // Donuts Needed At This Hour
-    f01.innerHTML = Math.floor((e01.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
-    f21.innerHTML = Math.floor((e21.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
-    f31.innerHTML = Math.floor((e31.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
-    f41.innerHTML = Math.floor((e41.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
-    f51.innerHTML = Math.floor((e51.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
-    f61.innerHTML = Math.floor((e61.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
-    f71.innerHTML = Math.floor((e71.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
-    f81.innerHTML = Math.floor((e81.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
-    f91.innerHTML = Math.floor((e91.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
-    f101.innerHTML = Math.floor((e101.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
-    f111.innerHTML = Math.floor((e111.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
-    //number of people enter
-    g01.innerHTML = Math.floor(e01.innerHTML * SouthLakeUnion.PercentEntering);
-    g21.innerHTML = Math.floor(e21.innerHTML * SouthLakeUnion.PercentEntering);
-    g31.innerHTML = Math.floor(e31.innerHTML * SouthLakeUnion.PercentEntering);
-    g41.innerHTML = Math.floor(e41.innerHTML * SouthLakeUnion.PercentEntering);
-    g51.innerHTML = Math.floor(e51.innerHTML * SouthLakeUnion.PercentEntering);
-    g61.innerHTML = Math.floor(e61.innerHTML * SouthLakeUnion.PercentEntering);
-    g71.innerHTML = Math.floor(e71.innerHTML * SouthLakeUnion.PercentEntering);
-    g81.innerHTML = Math.floor(e81.innerHTML * SouthLakeUnion.PercentEntering);
-    g91.innerHTML = Math.floor(e91.innerHTML * SouthLakeUnion.PercentEntering);
-    g101.innerHTML = Math.floor(e101.innerHTML * SouthLakeUnion.PercentEntering);
-    g111.innerHTML = Math.floor(e111.innerHTML * SouthLakeUnion.PercentEntering);
-    //Total Numbers Of Donuts Needed For WholeDay
-    d3.innerHTML = "Total Numbers Of Donuts Needed For WholeDay In SouthLakeUnion: " + Math.floor(x3 * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
+e21.innerHTML = SouthLakeUnion.HourlyFootTraffic[2];
+e31.innerHTML = SouthLakeUnion.HourlyFootTraffic[3];
+e41.innerHTML = SouthLakeUnion.HourlyFootTraffic[4];
+e51.innerHTML = SouthLakeUnion.HourlyFootTraffic[5];
+e61.innerHTML = SouthLakeUnion.HourlyFootTraffic[6];
+e71.innerHTML = SouthLakeUnion.HourlyFootTraffic[7];
+e81.innerHTML = SouthLakeUnion.HourlyFootTraffic[8];
+e91.innerHTML = SouthLakeUnion.HourlyFootTraffic[9];
+e101.innerHTML = SouthLakeUnion.HourlyFootTraffic[10];
+e111.innerHTML = SouthLakeUnion.HourlyFootTraffic[11];
+// Donuts Needed At This Hour
+f01.innerHTML = Math.floor((e01.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
+f21.innerHTML = Math.floor((e21.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
+f31.innerHTML = Math.floor((e31.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
+f41.innerHTML = Math.floor((e41.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
+f51.innerHTML = Math.floor((e51.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
+f61.innerHTML = Math.floor((e61.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
+f71.innerHTML = Math.floor((e71.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
+f81.innerHTML = Math.floor((e81.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
+f91.innerHTML = Math.floor((e91.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
+f101.innerHTML = Math.floor((e101.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
+f111.innerHTML = Math.floor((e111.innerHTML) * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
+//number of people enter
+g01.innerHTML = Math.floor(e01.innerHTML * SouthLakeUnion.PercentEntering);
+g21.innerHTML = Math.floor(e21.innerHTML * SouthLakeUnion.PercentEntering);
+g31.innerHTML = Math.floor(e31.innerHTML * SouthLakeUnion.PercentEntering);
+g41.innerHTML = Math.floor(e41.innerHTML * SouthLakeUnion.PercentEntering);
+g51.innerHTML = Math.floor(e51.innerHTML * SouthLakeUnion.PercentEntering);
+g61.innerHTML = Math.floor(e61.innerHTML * SouthLakeUnion.PercentEntering);
+g71.innerHTML = Math.floor(e71.innerHTML * SouthLakeUnion.PercentEntering);
+g81.innerHTML = Math.floor(e81.innerHTML * SouthLakeUnion.PercentEntering);
+g91.innerHTML = Math.floor(e91.innerHTML * SouthLakeUnion.PercentEntering);
+g101.innerHTML = Math.floor(e101.innerHTML * SouthLakeUnion.PercentEntering);
+g111.innerHTML = Math.floor(e111.innerHTML * SouthLakeUnion.PercentEntering);
+//Total Numbers Of Donuts Needed For WholeDay
+d3.innerHTML = "Total Numbers Of Donuts Needed For WholeDay In SouthLakeUnion: " + Math.floor(x3 * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
 
-    //#4
-    // Foot Traffic At This Hour
-    e1.innerHTML = Wedgewood.HourlyFootTraffic[1];
-    e2.innerHTML = Wedgewood.HourlyFootTraffic[2];
-    e3.innerHTML = Wedgewood.HourlyFootTraffic[3];
-    e4.innerHTML = Wedgewood.HourlyFootTraffic[4];
-    e5.innerHTML = Wedgewood.HourlyFootTraffic[5];
-    e6.innerHTML = Wedgewood.HourlyFootTraffic[6];
-    e7.innerHTML = Wedgewood.HourlyFootTraffic[7];
-    e8.innerHTML = Wedgewood.HourlyFootTraffic[8];
-    e9.innerHTML = Wedgewood.HourlyFootTraffic[9];
-    e10.innerHTML = Wedgewood.HourlyFootTraffic[10];
-    e11.innerHTML = Wedgewood.HourlyFootTraffic[11];
-    // Donuts Needed At This Hour
-    f1.innerHTML = Math.floor((e1.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
-    f2.innerHTML = Math.floor((e2.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
-    f3.innerHTML = Math.floor((e3.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
-    f4.innerHTML = Math.floor((e4.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
-    f5.innerHTML = Math.floor((e5.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
-    f6.innerHTML = Math.floor((e6.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
-    f7.innerHTML = Math.floor((e7.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
-    f8.innerHTML = Math.floor((e8.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
-    f9.innerHTML = Math.floor((e9.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
-    f10.innerHTML = Math.floor((e10.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
-    f11.innerHTML = Math.floor((e11.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
-    //number of people enter
-    g1.innerHTML = Math.floor(e1.innerHTML * Wedgewood.PercentEntering);
-    g2.innerHTML = Math.floor(e2.innerHTML * Wedgewood.PercentEntering);
-    g3.innerHTML = Math.floor(e3.innerHTML * Wedgewood.PercentEntering);
-    g4.innerHTML = Math.floor(e4.innerHTML * Wedgewood.PercentEntering);
-    g5.innerHTML = Math.floor(e5.innerHTML * Wedgewood.PercentEntering);
-    g6.innerHTML = Math.floor(e6.innerHTML * Wedgewood.PercentEntering);
-    g7.innerHTML = Math.floor(e7.innerHTML * Wedgewood.PercentEntering);
-    g8.innerHTML = Math.floor(e8.innerHTML * Wedgewood.PercentEntering);
-    g9.innerHTML = Math.floor(e9.innerHTML * Wedgewood.PercentEntering);
-    g10.innerHTML = Math.floor(e10.innerHTML * Wedgewood.PercentEntering);
-    g11.innerHTML = Math.floor(e11.innerHTML * Wedgewood.PercentEntering);
-    //Total Numbers Of Donuts Needed For WholeDay
-    d4.innerHTML = "Total Numbers Of Donuts Needed For WholeDay In Wedgewood: " + Math.floor(x4 * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
-    //#5
-    // Foot Traffic At This Hour
-    h1.innerHTML = Ballard.HourlyFootTraffic[1];
-    h2.innerHTML = Ballard.HourlyFootTraffic[2];
-    h3.innerHTML = Ballard.HourlyFootTraffic[3];
-    h4.innerHTML = Ballard.HourlyFootTraffic[4];
-    h5.innerHTML = Ballard.HourlyFootTraffic[5];
-    h6.innerHTML = Ballard.HourlyFootTraffic[6];
-    h7.innerHTML = Ballard.HourlyFootTraffic[7];
-    h8.innerHTML = Ballard.HourlyFootTraffic[8];
-    h9.innerHTML = Ballard.HourlyFootTraffic[9];
-    h10.innerHTML = Ballard.HourlyFootTraffic[10];
-    h11.innerHTML = Ballard.HourlyFootTraffic[11];
-    // Donuts Needed At This Hour
-    k1.innerHTML = Math.floor((h1.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
-    k2.innerHTML = Math.floor((h2.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
-    k3.innerHTML = Math.floor((h3.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
-    k4.innerHTML = Math.floor((h4.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
-    k5.innerHTML = Math.floor((h5.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
-    k6.innerHTML = Math.floor((h6.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
-    k7.innerHTML = Math.floor((h7.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
-    k8.innerHTML = Math.floor((h8.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
-    k9.innerHTML = Math.floor((h9.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
-    k10.innerHTML = Math.floor((h10.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
-    k11.innerHTML = Math.floor((h11.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
-    //number of people enter
-    m1.innerHTML = Math.floor(h1.innerHTML * Ballard.PercentEntering);
-    m2.innerHTML = Math.floor(h2.innerHTML * Ballard.PercentEntering);
-    m3.innerHTML = Math.floor(h3.innerHTML * Ballard.PercentEntering);
-    m4.innerHTML = Math.floor(h4.innerHTML * Ballard.PercentEntering);
-    m5.innerHTML = Math.floor(h5.innerHTML * Ballard.PercentEntering);
-    m6.innerHTML = Math.floor(h6.innerHTML * Ballard.PercentEntering);
-    m7.innerHTML = Math.floor(h7.innerHTML * Ballard.PercentEntering);
-    m8.innerHTML = Math.floor(h8.innerHTML * Ballard.PercentEntering);
-    m9.innerHTML = Math.floor(h9.innerHTML * Ballard.PercentEntering);
-    m10.innerHTML = Math.floor(h10.innerHTML * Ballard.PercentEntering);
-    m11.innerHTML = Math.floor(h11.innerHTML * Ballard.PercentEntering);
-    //Total Numbers Of Donuts Needed For WholeDay
-    d5.innerHTML = "Total Numbers Of Donuts Needed For WholeDay In Ballard: " + Math.floor(x5 * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
+//#4
+// Foot Traffic At This Hour
+e1.innerHTML = Wedgewood.HourlyFootTraffic[1];
+e2.innerHTML = Wedgewood.HourlyFootTraffic[2];
+e3.innerHTML = Wedgewood.HourlyFootTraffic[3];
+e4.innerHTML = Wedgewood.HourlyFootTraffic[4];
+e5.innerHTML = Wedgewood.HourlyFootTraffic[5];
+e6.innerHTML = Wedgewood.HourlyFootTraffic[6];
+e7.innerHTML = Wedgewood.HourlyFootTraffic[7];
+e8.innerHTML = Wedgewood.HourlyFootTraffic[8];
+e9.innerHTML = Wedgewood.HourlyFootTraffic[9];
+e10.innerHTML = Wedgewood.HourlyFootTraffic[10];
+e11.innerHTML = Wedgewood.HourlyFootTraffic[11];
+// Donuts Needed At This Hour
+f1.innerHTML = Math.floor((e1.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
+f2.innerHTML = Math.floor((e2.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
+f3.innerHTML = Math.floor((e3.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
+f4.innerHTML = Math.floor((e4.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
+f5.innerHTML = Math.floor((e5.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
+f6.innerHTML = Math.floor((e6.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
+f7.innerHTML = Math.floor((e7.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
+f8.innerHTML = Math.floor((e8.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
+f9.innerHTML = Math.floor((e9.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
+f10.innerHTML = Math.floor((e10.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
+f11.innerHTML = Math.floor((e11.innerHTML) * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
+//number of people enter
+g1.innerHTML = Math.floor(e1.innerHTML * Wedgewood.PercentEntering);
+g2.innerHTML = Math.floor(e2.innerHTML * Wedgewood.PercentEntering);
+g3.innerHTML = Math.floor(e3.innerHTML * Wedgewood.PercentEntering);
+g4.innerHTML = Math.floor(e4.innerHTML * Wedgewood.PercentEntering);
+g5.innerHTML = Math.floor(e5.innerHTML * Wedgewood.PercentEntering);
+g6.innerHTML = Math.floor(e6.innerHTML * Wedgewood.PercentEntering);
+g7.innerHTML = Math.floor(e7.innerHTML * Wedgewood.PercentEntering);
+g8.innerHTML = Math.floor(e8.innerHTML * Wedgewood.PercentEntering);
+g9.innerHTML = Math.floor(e9.innerHTML * Wedgewood.PercentEntering);
+g10.innerHTML = Math.floor(e10.innerHTML * Wedgewood.PercentEntering);
+g11.innerHTML = Math.floor(e11.innerHTML * Wedgewood.PercentEntering);
+//Total Numbers Of Donuts Needed For WholeDay
+d4.innerHTML = "Total Numbers Of Donuts Needed For WholeDay In Wedgewood: " + Math.floor(x4 * Wedgewood.PercentEntering * Wedgewood.NumberOfDonutsOrderdPerEnt);
+//#5
+// Foot Traffic At This Hour
+h1.innerHTML = Ballard.HourlyFootTraffic[1];
+h2.innerHTML = Ballard.HourlyFootTraffic[2];
+h3.innerHTML = Ballard.HourlyFootTraffic[3];
+h4.innerHTML = Ballard.HourlyFootTraffic[4];
+h5.innerHTML = Ballard.HourlyFootTraffic[5];
+h6.innerHTML = Ballard.HourlyFootTraffic[6];
+h7.innerHTML = Ballard.HourlyFootTraffic[7];
+h8.innerHTML = Ballard.HourlyFootTraffic[8];
+h9.innerHTML = Ballard.HourlyFootTraffic[9];
+h10.innerHTML = Ballard.HourlyFootTraffic[10];
+h11.innerHTML = Ballard.HourlyFootTraffic[11];
+// Donuts Needed At This Hour
+k1.innerHTML = Math.floor((h1.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
+k2.innerHTML = Math.floor((h2.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
+k3.innerHTML = Math.floor((h3.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
+k4.innerHTML = Math.floor((h4.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
+k5.innerHTML = Math.floor((h5.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
+k6.innerHTML = Math.floor((h6.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
+k7.innerHTML = Math.floor((h7.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
+k8.innerHTML = Math.floor((h8.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
+k9.innerHTML = Math.floor((h9.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
+k10.innerHTML = Math.floor((h10.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
+k11.innerHTML = Math.floor((h11.innerHTML) * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
+//number of people enter
+m1.innerHTML = Math.floor(h1.innerHTML * Ballard.PercentEntering);
+m2.innerHTML = Math.floor(h2.innerHTML * Ballard.PercentEntering);
+m3.innerHTML = Math.floor(h3.innerHTML * Ballard.PercentEntering);
+m4.innerHTML = Math.floor(h4.innerHTML * Ballard.PercentEntering);
+m5.innerHTML = Math.floor(h5.innerHTML * Ballard.PercentEntering);
+m6.innerHTML = Math.floor(h6.innerHTML * Ballard.PercentEntering);
+m7.innerHTML = Math.floor(h7.innerHTML * Ballard.PercentEntering);
+m8.innerHTML = Math.floor(h8.innerHTML * Ballard.PercentEntering);
+m9.innerHTML = Math.floor(h9.innerHTML * Ballard.PercentEntering);
+m10.innerHTML = Math.floor(h10.innerHTML * Ballard.PercentEntering);
+m11.innerHTML = Math.floor(h11.innerHTML * Ballard.PercentEntering);
+//Total Numbers Of Donuts Needed For WholeDay
+d5.innerHTML = "Total Numbers Of Donuts Needed For WholeDay In Ballard: " + Math.floor(x5 * Ballard.PercentEntering * Ballard.NumberOfDonutsOrderdPerEnt);
 </script>
 </body>
 </html>
