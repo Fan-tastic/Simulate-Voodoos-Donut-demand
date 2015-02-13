@@ -818,6 +818,7 @@ function ShowRow(){
         var rows = tempTd1.rows;
         
         var newTable = document.getElementById('newTable');
+        newTable.style.display = 'block';
         var thirdRow = document.createElement('tr');
         var table6 = document.getElementById('table6');
         thirdRow.className = "newTableRow";
@@ -827,7 +828,7 @@ function ShowRow(){
             table6.style.display = 'block';
             return;//console.log(check_array[v].value)
         } else{
-             table6.style.display = 'none';
+            table6.style.display = 'none';
         }
 
     }
