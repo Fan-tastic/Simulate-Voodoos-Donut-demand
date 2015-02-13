@@ -29,22 +29,22 @@
         <p>Check by Hours
        <br/>
     <p>Morning</p>
-    <p><input type="checkbox" value="6am-7am" name="check" />6am-7am</p>
-    <p><input type="checkbox" value="7am-8am" name="check" />7am-8am</p>
-    <p><input type="checkbox" value="8am-9am" name="check" />8am-9am</p>
-    <p><input type="checkbox" value="9am-10am" name="check" />9am-10am</p>
-    <p><input type="checkbox" value="10am-11am" name="check" />10am-11am</p>
-    <p><input type="checkbox" value="11am-12pm" name="check" />11am-12pm</p></p></td>
+    <p><input type="checkbox" value="6am-7am" name="check" onclick="ShowRow()"/>6am-7am</p>
+    <p><input type="checkbox" value="7am-8am" name="check" onclick="ShowRow()"/>7am-8am</p>
+    <p><input type="checkbox" value="8am-9am" name="check" onclick="ShowRow()"/>8am-9am</p>
+    <p><input type="checkbox" value="9am-10am" name="check" onclick="ShowRow()"/>9am-10am</p>
+    <p><input type="checkbox" value="10am-11am" name="check" onclick="ShowRow()"/>10am-11am</p>
+    <p><input type="checkbox" value="11am-12pm" name="check" onclick="ShowRow()"/>11am-12pm</p></p></td>
 <td class="testPosition2">
     <br/>
     <br/>
     <p>Afternoon</p>
-    <p><input type="checkbox" value="12pm-1pm" name="check" />12pm-1pm</p>
-    <p><input type="checkbox" value="1pm-2pm" name="check" />1pm-2pm</p>
-    <p><input type="checkbox" value="2pm-3pm" name="check" />2pm-3pm</p>
-    <p><input type="checkbox" value="3pm-4pm" name="check" />3pm-4pm</p>
-    <p><input type="checkbox" value="4pm-5pm" name="check" />4pm-5pm</p>
-    <p>&nbsp;&nbsp;<input type="button"  value="Search/Clear" class="Search" onclick="ShowRow()"></p></td>
+    <p><input type="checkbox" value="12pm-1pm" name="check" onclick="ShowRow()"/>12pm-1pm</p>
+    <p><input type="checkbox" value="1pm-2pm" name="check" onclick="ShowRow()"/>1pm-2pm</p>
+    <p><input type="checkbox" value="2pm-3pm" name="check" onclick="ShowRow()"/>2pm-3pm</p>
+    <p><input type="checkbox" value="3pm-4pm" name="check" onclick="ShowRow()"/>3pm-4pm</p>
+    <p><input type="checkbox" value="4pm-5pm" name="check" onclick="ShowRow()"/>4pm-5pm</p>
+    <p>&nbsp;&nbsp;<input type="button"  value="Clear" class="Search" onclick="Refresh()"></p></td>
 <td>
 <div id="table1" style='display:none' class="Tp1">
     <foot id="d1" class="d1"></foot>
@@ -826,12 +826,29 @@ function ShowRow(){
             return;//console.log(check_array[v].value)
 }else{
      table6.style.display = 'none';
-
 }
 
 }
 
 }
+
+function Refresh(){
+    var tab = document.getElementById('newTable');
+    var tab6 = document.getElementById('table6');
+    var check_array6 = document.getElementsByName('check');
+    for (z=0;z<check_array6.length;z++){
+       if(check_array6[z].checked == true){         
+        check_array6[z].checked = false; 
+}
+}
+    for(i > 0;i = tab.length - 2;i--) {
+        tab.deleteRow(i);
+    }
+       tab.style.display = 'none';
+
+
+}
+
 //Verify username and password
 function LogIn(){
     var LogInCheckUsername = document.getElementById('StaffID').value;
