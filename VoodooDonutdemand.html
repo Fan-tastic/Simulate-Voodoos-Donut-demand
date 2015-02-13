@@ -811,42 +811,44 @@
 <script type="text/javascript">
 //Checkbox Search
 function ShowRow(){
-      var check_array = document.getElementsByName('check');
+    var check_array = document.getElementsByName('check');
+    
     for (v=0;v<check_array.length;v++){
-    var tempTd1 = document.getElementById('table11');
-    var rows = tempTd1.rows;
-    var newTable = document.getElementById('newTable');
-    var thirdRow = document.createElement('tr');
-    var table6 = document.getElementById('table6');
-    thirdRow.className = "newTableRow";
+        var tempTd1 = document.getElementById('table11');
+        var rows = tempTd1.rows;
+        
+        var newTable = document.getElementById('newTable');
+        var thirdRow = document.createElement('tr');
+        var table6 = document.getElementById('table6');
+        thirdRow.className = "newTableRow";
         if (check_array[v].checked==true){
             thirdRow.innerHTML = rows[v+2].innerHTML;
             newTable.appendChild(thirdRow);
             table6.style.display = 'block';
             return;//console.log(check_array[v].value)
-}else{
-     table6.style.display = 'none';
-}
+        } else{
+             table6.style.display = 'none';
+        }
 
-}
+    }
 
 }
 
 function Refresh(){
     var tab = document.getElementById('newTable');
-    var tab6 = document.getElementById('table6');
+    
     var check_array6 = document.getElementsByName('check');
+    
     for (z=0;z<check_array6.length;z++){
-       if(check_array6[z].checked == true){         
-        check_array6[z].checked = false; 
-}
-}
+        if(check_array6[z].checked == true){         
+            check_array6[z].checked = false; 
+        }
+    }
     for(i > 0;i = tab.length - 2;i--) {
         tab.deleteRow(i);
     }
-       tab.style.display = 'none';
 
-
+    tab.style.display = 'none';
 }
 
 //Verify username and password
