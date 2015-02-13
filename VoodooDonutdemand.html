@@ -25,7 +25,7 @@
         <br/>
     <br/>
 <table>
-<td>
+<td class="testPosition1">
         <p>Check by Hours
        <br/>
     <p>Morning</p>
@@ -35,7 +35,7 @@
     <p><input type="checkbox" value="9am-10am" name="check" />9am-10am</p>
     <p><input type="checkbox" value="10am-11am" name="check" />10am-11am</p>
     <p><input type="checkbox" value="11am-12pm" name="check" />11am-12pm</p></p></td>
-<td>
+<td class="testPosition2">
     <br/>
     <br/>
     <p>Afternoon</p>
@@ -44,11 +44,11 @@
     <p><input type="checkbox" value="2pm-3pm" name="check" />2pm-3pm</p>
     <p><input type="checkbox" value="3pm-4pm" name="check" />3pm-4pm</p>
     <p><input type="checkbox" value="4pm-5pm" name="check" />4pm-5pm</p>
-    <p>&nbsp;&nbsp;<input type="button"  value="Search" class="Search" onclick="ShowRow()"></p></td>
+    <p>&nbsp;&nbsp;<input type="button"  value="Search/Clear" class="Search" onclick="ShowRow()"></p></td>
 <td>
-<div id="table1" style='display:none'>
+<div id="table1" style='display:none' class="Tp1">
     <foot id="d1" class="d1"></foot>
-    <table width="160%" border="0" cellspacing="0" cellpadding="0" align="center" id="table11">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" id="table11">
         <tr class="tb1Title">
             <td colspan="5" align="center">
                 Downtown
@@ -192,9 +192,9 @@
         </tr>
     </table>
 </div>
-<div id="table2" style='display:none'>
+<div id="table2" style='display:none' class='Tp2'>
     <foot id="d2" class="d2"></foot>
-    <table width="160%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
         <tr class="tb2Title">
             <td colspan="5" align="center">
                 CaptitolHill
@@ -338,9 +338,9 @@
         </tr>
     </table>
 </div>
-<div id="table3" style='display:none'>
+<div id="table3" style='display:none' class='Tp3'>
     <foot id="d3" class="d3"></foot>
-    <table width="160%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
         <tr class="tb3Title">
             <td colspan="5" align="center">
                 SouthLakeUnion
@@ -484,9 +484,9 @@
         </tr>
     </table>
 </div>
-<div id="table4" style='display:none'>
+<div id="table4" style='display:none' class='Tp4'>
     <foot id="d4" class="d4"></foot>
-    <table width="160%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
         <tr class="tb4Title">
             <td colspan="5" align="center">
                 Wedgewood
@@ -631,9 +631,9 @@
         </tr>
     </table>
 </div>
-<div id="table5" style='display:none'>
+<div id="table5" style='display:none' class='Tp5'>
     <foot id="d5" class="d5"></foot>
-    <table width="160%" border="0" cellspacing="0" cellpadding="0"  align="center">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0"  align="center">
         <tr class="tb5Title">
             <td colspan="5" align="center">
                 Ballard
@@ -777,22 +777,60 @@
             </td>
         </tr>
     </table>
+
+</div>
+<div id="table6" style='display:none' class='Tp6'>
+<table id="newTable" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" >
+     <tr class="tb1Title">
+            <td colspan="5" align="center">
+                Downtown
+            </td>
+        </tr>
+        <br/>
+        <tr class="tb1Sub">
+            <td align="center">
+                Time
+            </td>
+            <td align="center">
+                Foot Traffic At This Hour
+            </td>
+            <td align="center">
+                Number of People Enter
+            </td>
+            <td align="center">
+                Donuts Are Needed At This Hour
+            </td>
+        </tr>
+    </table>
 </div>
 </td>
 </table>
+
 </div>
 </form>
 <script type="text/javascript">
 //Checkbox Search
 function ShowRow(){
-    for (v=0;v<11;v++){
-    var tempTd=document.getElementById("table11");
-    var check_array=document.getElementsByName("check");
-    var rows=tempTd.rows;
+      var check_array = document.getElementsByName('check');
+    for (v=0;v<check_array.length;v++){
+    var tempTd1 = document.getElementById('table11');
+    var rows = tempTd1.rows;
+    var newTable = document.getElementById('newTable');
+    var thirdRow = document.createElement('tr');
+    var table6 = document.getElementById('table6');
+    thirdRow.className = "newTableRow";
         if (check_array[v].checked==true){
-alert(rows[v+2].innerHTML);
+            thirdRow.innerHTML = rows[v+2].innerHTML;
+            newTable.appendChild(thirdRow);
+            table6.style.display = 'block';
+            return;//console.log(check_array[v].value)
+}else{
+     table6.style.display = 'none';
+
 }
+
 }
+
 }
 //Verify username and password
 function LogIn(){
@@ -817,7 +855,6 @@ function show(obj){
     if(selectedvalue==''){
         selectedvalue = '-1';
     }
-
     for(j=1;j<=5;j++){
         var divobj = document.getElementById('table'+j);
         if(parseInt(selectedvalue)==j){
@@ -827,13 +864,11 @@ function show(obj){
         }
     }
 }
-
 //randomize a number from hourly foot traffic range
 function RanDom(min, max){
     var HourlyFoot = Math.floor(Math.random() * (max-min+1) + min);
     return HourlyFoot;
 }
-
 var Downtown = {
     HoursOfOperation : 11,//from 7a-6p, operation hour is 11
     HourlyFootTraffic: [], //hourly foot traffic range
@@ -999,7 +1034,6 @@ g101.innerHTML = Math.floor(e101.innerHTML * SouthLakeUnion.PercentEntering);
 g111.innerHTML = Math.floor(e111.innerHTML * SouthLakeUnion.PercentEntering);
 //Total Numbers Of Donuts Needed For WholeDay
 d3.innerHTML = "Total Numbers Of Donuts Needed For WholeDay In SouthLakeUnion: " + Math.floor(x3 * SouthLakeUnion.PercentEntering * SouthLakeUnion.NumberOfDonutsOrderdPerEnt);
-
 //#4
 // Foot Traffic At This Hour
 e1.innerHTML = Wedgewood.HourlyFootTraffic[1];

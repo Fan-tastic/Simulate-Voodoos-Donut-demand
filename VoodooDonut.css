@@ -44,6 +44,29 @@ tr.tb1Sub {
     background-color:  #930000;
 }
 
+tr.newTableTitle {
+        opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    font-size:30px;
+    background-color:  #930000;
+}
+
+tr.newTableSubTitle {
+        opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #930000;
+}
+
+tr.newTableRow{
+    opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    background-color:  #AE0000;
+
+}
+
 tr.tb13{
 	opacity: 0.9;
     font-weight:bold;
@@ -470,3 +493,25 @@ foot.d5{
     background-color:  #FFEEDD;
 }
 
+td.testPosition1{
+    position:absolute;
+    background-color: #FFEEDD;
+    opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+}
+
+td.testPosition2{
+position:absolute;
+  left:137px;
+  top:246px;
+  background-color: #FFEEDD;
+    opacity: 0.9;
+    font-weight:bold;
+    font-family: cursive, fantasy;
+}
+div.Tp1, div.Tp2, div.Tp3, div.Tp4, div.Tp5, div.Tp6{
+    position:absolute;
+    left:273px;
+    top:248px;
+}
