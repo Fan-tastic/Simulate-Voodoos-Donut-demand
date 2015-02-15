@@ -11,6 +11,12 @@
 <div id="Success" style='display:block' class="Name">
     <p>Staff ID&nbsp;<input type="text"  id="StaffID" placeholder="10 characters Staff ID">&nbsp;&nbsp;Password&nbsp;<input type="password" id="StaffPassword">&nbsp;&nbsp;
         <input type="button"  value="submit" class="submit" onclick="LogIn()"></p>
+          <img src="Pic/roll2.jpg" style="width:173px;height:120px;" class="imageAnimation">
+          <img src="Pic/roll1.jpeg" style="width:173px;height:120px;" class="imageAnimation1">
+           <img src="Pic/rolls3.jpg" style="width:173px;height:120px;" class="imageAnimation2">
+            <img src="Pic/roll4.jpg" style="width:173px;height:120px;" class="imageAnimation3">
+             <img src="Pic/roll5.png" style="width:173px;height:120px;" class="imageAnimation4">
+              <img src="Pic/roll6.jpg" style="width:173px;height:120px;" class="imageAnimation5">
 </div>
 <div id="ShowMore" style='display:none' class="Detail">
 <p id="Location">Pick a Voodoo shop
@@ -44,7 +50,14 @@
     <p><input type="checkbox" value="2pm-3pm" name="check" onclick="ShowRow()"/>2pm-3pm</p>
     <p><input type="checkbox" value="3pm-4pm" name="check" onclick="ShowRow()"/>3pm-4pm</p>
     <p><input type="checkbox" value="4pm-5pm" name="check" onclick="ShowRow()"/>4pm-5pm</p>
-    <p>&nbsp;&nbsp;<input type="button"  value="Clear" class="Search" onclick="Refresh()"></p></td>
+    <section title="Refresh!!!">
+    <!-- .slideTwo -->
+    <div class="slideTwo"><p class="Refresh">Refresh!!!!</p> 
+      <input type="checkbox" value="None" id="slideTwo" name="check1"  checked onclick="Refresh()"/>
+      <label for="slideTwo"></label>
+    </div>
+    <!-- end .slideTwo -->
+  </section></td>
 <td>
 <div id="table1" style='display:none' class="Tp1">
     <foot id="d1" class="d1"></foot>
@@ -818,6 +831,7 @@ function ShowRow(){
     var newTable = document.getElementById('newTable');
     var thirdRow = document.createElement('tr');
     var table6 = document.getElementById('table6');
+    table6.style.display='block';
     thirdRow.className = "newTableRow";
         if (check_array[v].checked==true){
             thirdRow.innerHTML = rows[v+2].innerHTML;
@@ -841,10 +855,10 @@ function Refresh(){
         check_array6[z].checked = false; 
 }
 }
-    for(i > 0;i = tab.length - 2;i--) {
+    for(var i = tab.length - 2;i=0;i--) {
         tab.deleteRow(i);
     }
-       tab.style.display = 'none';
+    tab6.style.display = 'none';
 
 
 }

@@ -11,6 +11,15 @@ header {
 
 }
 
+p.Refresh {
+    font-weight:bold;
+    font-family: cursive, fantasy;
+    font-size:20px;
+    background-color: #FFEEDD;
+    opacity: 0.9;
+}
+
+
 div.Name {
 	background-color: #FFEEDD;
     opacity: 0.9;
@@ -514,4 +523,160 @@ div.Tp1, div.Tp2, div.Tp3, div.Tp4, div.Tp5, div.Tp6{
     position:absolute;
     left:273px;
     top:248px;
+}
+
+
+.slideTwo {
+  width: 80px;
+  height: 30px;
+  background: #333;
+  margin: 20px auto;
+  position: relative;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+.slideTwo:after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  height: 2px;
+  width: 52px;
+  background: #111;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+/*Refresh Switch*/
+.slideTwo label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  position: absolute;
+  top: 4px;
+  z-index: 1;
+  left: 4px;
+  background: #fcfff4;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+}
+.slideTwo label:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: #333;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px black, 0px 1px 0px rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: inset 0px 1px 1px black, 0px 1px 0px rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0px 1px 1px black, 0px 1px 0px rgba(255, 255, 255, 0.9);
+}
+.slideTwo input[type=checkbox] {
+  visibility: hidden;
+}
+.slideTwo input[type=checkbox]:checked + label {
+  left: 54px;
+}
+.slideTwo input[type=checkbox]:checked + label:after {
+  background: #00bf00;
+}
+/*animation*/
+
+img.imageAnimation {
+    position:absolute;
+    left:99px;
+    top:248px;
+animation-name: imgAnimation;
+animation: imgAnimation 2s alternate infinite;
+-webkit-animation: imgAnimation 2s alternate infinite;
+}
+@-webkit-keyframes imgAnimation{
+0%{ left: -198px}
+100%{ left: 50%;}
+}
+@-webkit-keyframes imgAnimation{
+0%{ opacity: 0}
+50%{ opacity: 0.5}
+100%{ opacity: 1}
+}
+
+img.imageAnimation1 {
+    position:absolute;
+    left:273px;
+    top:248px;
+
+-webkit-transform:rotate(45deg);
+
+
+transform:rotate(45deg);
+}
+
+img.imageAnimation2 {
+    position:absolute;
+    left:432px;
+    top:248px;
+transition:All 0.8s ease-in-out;
+-webkit-transform: 0.8s ease-in-out;
+}
+img.imageAnimation2:hover {
+    transform:transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+}
+
+img.imageAnimation3 {
+    position:absolute;
+    left:604px;
+    top:248px;
+    transition:All 0.4s ease-in-out;
+    -webkit-transition:All 0.4s ease-in-out;
+}
+img.imageAnimation3:hover {
+    transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+}
+
+img.imageAnimation4 {
+    position:absolute;
+    left:774px;
+    top:248px;
+}
+
+img.imageAnimation5 {
+    position:absolute;
+    left:939px;
+    top:248px;
+    animation:myfirst 5s;
+-webkit-animation:myfirst 5s; /* Safari and Chrome */
+
+}
+ @-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {background:red; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
 }
