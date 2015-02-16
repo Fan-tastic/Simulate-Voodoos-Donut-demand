@@ -668,6 +668,7 @@ img.imageAnimation5 {
     position:absolute;
     left:939px;
     top:248px;
+    background:red;
     animation:myfirst 5s;
 -webkit-animation:myfirst 5s; /* Safari and Chrome */
 
